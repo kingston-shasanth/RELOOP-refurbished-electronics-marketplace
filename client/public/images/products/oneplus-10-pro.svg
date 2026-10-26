@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F8FAFC" rx="12" />
+  <rect x="135" y="30" width="130" height="240" rx="20" fill="#0F172A" stroke="#334155" stroke-width="2" />
+  <!-- Wrapped ceramic camera module on left edge -->
+  <path d="M135 60 L210 60 C218 60 224 66 224 74 L224 140 C224 148 218 154 210 154 L135 154 Z" fill="#1E293B" stroke="#475569" stroke-width="1.5" />
+  <circle cx="165" cy="85" r="12" fill="#020617" stroke="#94A3B8" stroke-width="1.5" />
+  <circle cx="195" cy="85" r="12" fill="#020617" stroke="#94A3B8" stroke-width="1.5" />
+  <circle cx="165" cy="125" r="12" fill="#020617" stroke="#94A3B8" stroke-width="1.5" />
+  <circle cx="195" cy="125" r="8" fill="#F59E0B" />
+  <rect x="14" y="14" width="140" height="22" rx="11" fill="#FEE2E2" />
+  <text x="84" y="29" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#DC2626">ONEPLUS 10 PRO · 5G</text>
+</svg>

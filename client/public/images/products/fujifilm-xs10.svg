@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F8FAFC" rx="12" />
+  <rect x="80" y="85" width="240" height="145" rx="10" fill="#27272A" stroke="#52525B" stroke-width="2" />
+  <!-- Vintage Metal Top Plate -->
+  <rect x="80" y="70" width="240" height="20" rx="4" fill="#71717A" />
+  <!-- Mode Dial -->
+  <rect x="100" y="60" width="26" height="12" rx="2" fill="#D4D4D8" stroke="#3F3F46" stroke-width="1" />
+  <!-- Lens Barrel -->
+  <circle cx="185" cy="160" r="56" fill="#18181B" stroke="#3F3F46" stroke-width="3" />
+  <circle cx="185" cy="160" r="38" fill="#020617" />
+  <ellipse cx="178" cy="150" rx="15" ry="8" fill="#22C55E" opacity="0.6" />
+  <rect x="14" y="14" width="136" height="22" rx="11" fill="#F1F5F9" />
+  <text x="82" y="29" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#334155">FUJIFILM X-S10 · IBIS</text>
+</svg>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RELOOP — Quality Renewed. Value Restored. Premium certified refurbished smartphones, laptops, tablets, gaming, wearables, audio and PC components backed by 50-point diagnostic checks, digital product passports and guaranteed warranties." />
+    <meta name="theme-color" content="#0B1220" />
+    <title>RELOOP — Premium Refurbished Electronics</title>
+    <!-- Google Fonts: Manrope & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230B1220'/><circle cx='50' cy='50' r='36' stroke='%23087F5B' stroke-width='7' stroke-dasharray='70 20' fill='none'/><circle cx='50' cy='50' r='14' fill='%23FAF9F6'/><circle cx='50' cy='50' r='7' fill='%23087F5B'/></svg>" />
+
+    <style>
+      /* Refined Light-Theme Brand Splash Screen */
+      #reloop-app-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        background: #FAF9F6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #151B26;
+        font-family: 'Manrope', 'Inter', -apple-system, sans-serif;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      #reloop-app-loader.fade-out {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .loader-symbol {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 1.25rem;
+        animation: reloopSpin 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        transform-origin: center center;
+      }
+      @keyframes reloopSpin {
+        0% { transform: rotate(0deg); }
+        50% { transform: rotate(180deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .loader-brand {
+        display: flex;
+        align-items: baseline;
+        font-size: 2.2rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        margin-bottom: 0.4rem;
+      }
+      .loader-brand .navy-part { color: #0B1220; }
+      .loader-brand .green-part { color: #087F5B; }
+      .loader-tagline {
+        font-size: 0.85rem;
+        color: #687386;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        margin-bottom: 1.5rem;
+      }
+      .loader-bar-wrap {
+        width: 140px;
+        height: 3px;
+        background: #E7E9ED;
+        border-radius: 9999px;
+        overflow: hidden;
+      }
+      .loader-bar {
+        width: 35%;
+        height: 100%;
+        background: #087F5B;
+        border-radius: 9999px;
+        animation: reloopIndeterminate 1.2s infinite ease-in-out;
+      }
+      @keyframes reloopIndeterminate {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(280%); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .loader-symbol { animation: none; }
+        .loader-bar { animation: none; width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Refined Light-Theme First Load Brand Experience -->
+    <div id="reloop-app-loader">
+      <svg class="loader-symbol" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="44" stroke="#E7E9ED" stroke-width="6" />
+        <path d="M 50 6 A 44 44 0 0 1 94 50" stroke="#087F5B" stroke-width="6" stroke-linecap="round" />
+        <circle cx="94" cy="50" r="4" fill="#087F5B" />
+        <path d="M 50 94 A 44 44 0 0 1 6 50" stroke="#087F5B" stroke-width="6" stroke-linecap="round" />
+        <circle cx="6" cy="50" r="4" fill="#087F5B" />
+        <circle cx="50" cy="50" r="16" fill="#FFFFFF" stroke="#E7E9ED" stroke-width="2" />
+        <circle cx="50" cy="50" r="7" fill="#087F5B" />
+      </svg>
+      <div class="loader-brand">
+        <span class="navy-part">RE</span><span class="green-part">LOOP</span>
+      </div>
+      <div class="loader-tagline">Quality renewed. Value restored.</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

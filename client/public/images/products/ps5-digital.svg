@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F8FAFC" rx="12" />
+  <!-- PS5 Outer White Curved Wing Shell -->
+  <path d="M170 30 Q160 140 165 255 L190 260 Q180 140 185 30 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2" />
+  <!-- Black Glossy Center Monolith -->
+  <rect x="185" y="35" width="30" height="225" rx="3" fill="#090D14" />
+  <!-- Blue LED Accent Line -->
+  <line x1="185" y1="40" x2="185" y2="255" stroke="#38BDF8" stroke-width="2" opacity="0.9" />
+  <!-- Right White Curved Wing Shell -->
+  <path d="M215 30 Q225 140 220 255 L245 260 Q250 140 240 30 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2" />
+  <!-- Base Stand -->
+  <ellipse cx="205" cy="265" rx="45" ry="10" fill="#0F172A" />
+  <!-- DualSense Controller Beside Console -->
+  <g transform="translate(250, 160) scale(0.65)">
+    <path d="M30 30 C15 70, 0 110, 20 120 C35 125, 55 90, 70 80 L110 80 C125 90, 145 125, 160 120 C180 110, 165 70, 150 30 C130 15, 50 15, 30 30 Z" fill="#FFFFFF" stroke="#64748B" stroke-width="3" />
+    <circle cx="65" cy="70" r="14" fill="#0F172A" />
+    <circle cx="115" cy="70" r="14" fill="#0F172A" />
+  </g>
+  <rect x="14" y="14" width="116" height="22" rx="11" fill="#EDE9FE" />
+  <text x="72" y="29" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#7C3AED">PS5 DIGITAL EDITION</text>
+</svg>

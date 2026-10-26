@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F8FAFC" rx="12" />
+  <!-- RAM Stick Heatsink -->
+  <rect x="60" y="100" width="280" height="85" rx="6" fill="#0F172A" stroke="#334155" stroke-width="2" />
+  <!-- RGB Light Bar Diffuser -->
+  <rect x="60" y="85" width="280" height="18" rx="4" fill="url(#rgbGradient)" />
+  <defs>
+    <linearGradient id="rgbGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899" />
+      <stop offset="25%" stop-color="#8B5CF6" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="75%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+  <!-- Gold Contact Pins -->
+  <rect x="75" y="185" width="250" height="15" fill="#CA8A04" />
+  <text x="200" y="150" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#F8FAFC">CORSAIR VENGEANCE · 32GB</text>
+  <rect x="14" y="14" width="146" height="22" rx="11" fill="#EDE9FE" />
+  <text x="87" y="29" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#7C3AED">32GB DDR4 · 3600MHz</text>
+</svg>

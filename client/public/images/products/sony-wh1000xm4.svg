@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F8FAFC" rx="12" />
+  <!-- Headband Arc -->
+  <path d="M120 180 C110 80, 290 80, 280 180" stroke="#1E293B" stroke-width="22" stroke-linecap="round" fill="none" />
+  <path d="M120 180 C110 80, 290 80, 280 180" stroke="#0F172A" stroke-width="16" stroke-linecap="round" fill="none" />
+  <!-- Headband Cushion Underneath -->
+  <path d="M140 145 C150 95, 250 95, 260 145" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none" />
+  <!-- Left Earcup Assembly -->
+  <ellipse cx="115" cy="190" rx="30" ry="46" fill="#0F172A" stroke="#B45309" stroke-width="2" />
+  <ellipse cx="115" cy="190" rx="20" ry="34" fill="#1E293B" />
+  <!-- Right Earcup Assembly -->
+  <ellipse cx="285" cy="190" rx="30" ry="46" fill="#0F172A" stroke="#B45309" stroke-width="2" />
+  <ellipse cx="285" cy="190" rx="20" ry="34" fill="#1E293B" />
+  <!-- Sony Gold Logo accent line -->
+  <rect x="105" y="155" width="20" height="3" rx="1.5" fill="#D97706" />
+  <rect x="275" y="155" width="20" height="3" rx="1.5" fill="#D97706" />
+  <rect x="14" y="14" width="124" height="22" rx="11" fill="#FEF3C7" />
+  <text x="76" y="29" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#B45309">SONY ANC HEADPHONES</text>
+</svg>

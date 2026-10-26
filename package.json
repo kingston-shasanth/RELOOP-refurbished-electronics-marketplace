@@ -1,0 +1,27 @@
+{
+  "name": "reloop",
+  "version": "1.0.0",
+  "description": "RELOOP — Refurbished Electronics E-Commerce Platform (MERN Stack)",
+  "scripts": {
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "seed": "cd server && npm run seed",
+    "test:health": "cd server && npm run test:health",
+    "test:audit": "cd server && node test/complianceAudit.js",
+    "test:regression": "cd server && npm run test:regression",
+    "test:e2e": "cd server && npm run test:e2e",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [
+    "refurbished",
+    "electronics",
+    "e-commerce",
+    "mern",
+    "react",
+    "vite",
+    "mongodb",
+    "digital-product-passport"
+  ],
+  "author": "RELOOP Team",
+  "license": "ISC"
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F8FAFC" rx="12" />
+  <!-- Display Lid Open -->
+  <rect x="75" y="45" width="250" height="155" rx="8" fill="#24292E" stroke="#64748B" stroke-width="2" />
+  <!-- Screen Area -->
+  <rect x="85" y="55" width="230" height="135" rx="3" fill="#0F172A" />
+  <path d="M85 55 L315 190 L85 190 Z" fill="#1E293B" opacity="0.6"/>
+  <circle cx="200" cy="120" r="14" fill="#38BDF8" opacity="0.8" />
+  <!-- Apple Logo Outline on Screen center -->
+  <path d="M200 115 C197 115 195 117 195 120 C195 125 200 128 200 128 C200 128 205 125 205 120 C205 117 203 115 200 115 Z" fill="#FFFFFF" />
+  <!-- WebCam -->
+  <circle cx="200" cy="50" r="1.5" fill="#475569" />
+  <!-- Hinge -->
+  <rect x="150" y="200" width="100" height="4" fill="#334155" rx="2" />
+  <!-- Base Keyboard Deck (Wedge) -->
+  <polygon points="50,235 350,235 330,204 70,204" fill="#CBD5E1" stroke="#94A3B8" stroke-width="1.5" />
+  <!-- Keyboard area -->
+  <polygon points="90,224 310,224 300,207 100,207" fill="#1E293B" />
+  <!-- Trackpad -->
+  <rect x="165" y="226" width="70" height="7" rx="1.5" fill="#E2E8F0" stroke="#94A3B8" stroke-width="0.7" />
+  <!-- Front lip -->
+  <path d="M50 235 L350 235 L346 240 L54 240 Z" fill="#94A3B8" />
+  <!-- Badge -->
+  <rect x="14" y="14" width="94" height="22" rx="11" fill="#EBFBEE" />
+  <text x="61" y="29" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#16804A">APPLE M1 · 13.3"</text>
+</svg>

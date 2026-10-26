@@ -1,0 +1,234 @@
+[
+  {
+    "_id": "6adcd5662597cf60eea39ba0",
+    "user": "6adcd5662597cf60eea39b58",
+    "deviceCategory": "Smartphones",
+    "brand": "Apple",
+    "modelName": "iPhone 12 (64GB)",
+    "specifications": "Black, Battery 84%",
+    "functionalState": {
+      "powersOn": true,
+      "screenIntact": true,
+      "touchResponsive": true,
+      "camerasWork": true,
+      "batteryWorking": true
+    },
+    "cosmeticGrade": "Good (Minor Scratches)",
+    "estimatedValue": 14500,
+    "valuationBreakdown": {
+      "baseModelValue": 16000,
+      "functionalDeductions": 0,
+      "cosmeticMultiplier": 1
+    },
+    "status": "Submitted",
+    "voucherCode": "",
+    "inspectorNotes": "",
+    "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+    "createdAt": "2026-10-24T15:57:26.150Z",
+    "updatedAt": "2026-10-24T15:57:26.150Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcdbeb91c3f14a607472e5",
+    "user": "6adcdbea91c3f14a607472cf",
+    "deviceCategory": "Smartphones",
+    "brand": "Apple",
+    "modelName": "iPhone 13 128GB",
+    "specifications": "Battery: 85-90%, Screen: Intact, Casing: Good",
+    "functionalState": {
+      "powersOn": true,
+      "screenIntact": true,
+      "touchResponsive": true,
+      "camerasWork": true,
+      "batteryWorking": true
+    },
+    "cosmeticGrade": "Good (Minor Scratches)",
+    "estimatedValue": 18000,
+    "valuationBreakdown": {
+      "baseModelValue": 20000,
+      "functionalDeductions": 0,
+      "cosmeticMultiplier": 1
+    },
+    "status": "Submitted",
+    "voucherCode": "",
+    "inspectorNotes": "",
+    "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+    "createdAt": "2026-10-24T16:25:15.175Z",
+    "updatedAt": "2026-10-24T16:25:15.175Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcdc0f4a267f9ddd098714",
+    "user": "6adcdc0e4a267f9ddd0986fd",
+    "deviceCategory": "Smartphones",
+    "brand": "Apple",
+    "modelName": "iPhone 13 128GB",
+    "specifications": "Battery: 85-90%, Screen: Intact, Casing: Good",
+    "functionalState": {
+      "powersOn": true,
+      "screenIntact": true,
+      "touchResponsive": true,
+      "camerasWork": true,
+      "batteryWorking": true
+    },
+    "cosmeticGrade": "Good (Minor Scratches)",
+    "estimatedValue": 18000,
+    "valuationBreakdown": {
+      "baseModelValue": 20000,
+      "functionalDeductions": 0,
+      "cosmeticMultiplier": 1
+    },
+    "status": "Submitted",
+    "voucherCode": "",
+    "inspectorNotes": "",
+    "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+    "createdAt": "2026-10-24T16:25:51.136Z",
+    "updatedAt": "2026-10-24T16:25:51.136Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec960eb249b67bb9cb1c",
+    "user": "6adcec960eb249b67bb9cb08",
+    "deviceCategory": "Smartphones",
+    "brand": "Apple",
+    "modelName": "iPhone 13 128GB",
+    "specifications": "Battery: 85-90%, Screen: Intact, Casing: Good",
+    "functionalState": {
+      "powersOn": true,
+      "screenIntact": true,
+      "touchResponsive": true,
+      "camerasWork": true,
+      "batteryWorking": true
+    },
+    "cosmeticGrade": "Good (Minor Scratches)",
+    "estimatedValue": 18000,
+    "valuationBreakdown": {
+      "baseModelValue": 20000,
+      "functionalDeductions": 0,
+      "cosmeticMultiplier": 1
+    },
+    "status": "Submitted",
+    "voucherCode": "",
+    "inspectorNotes": "",
+    "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+    "createdAt": "2026-10-24T17:36:22.995Z",
+    "updatedAt": "2026-10-24T17:36:22.995Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcedf8931b274ddd627b9d",
+    "user": "6adcedf8931b274ddd627b85",
+    "deviceCategory": "Smartphones",
+    "brand": "Apple",
+    "modelName": "iPhone 13 128GB",
+    "specifications": "Battery: 85-90%, Screen: Intact, Casing: Good",
+    "functionalState": {
+      "powersOn": true,
+      "screenIntact": true,
+      "touchResponsive": true,
+      "camerasWork": true,
+      "batteryWorking": true
+    },
+    "cosmeticGrade": "Good (Minor Scratches)",
+    "estimatedValue": 18000,
+    "valuationBreakdown": {
+      "baseModelValue": 20000,
+      "functionalDeductions": 0,
+      "cosmeticMultiplier": 1
+    },
+    "status": "Submitted",
+    "voucherCode": "",
+    "inspectorNotes": "",
+    "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+    "createdAt": "2026-10-24T17:42:16.915Z",
+    "updatedAt": "2026-10-24T17:42:16.915Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcf1ecbce8550d78e7bfd1",
+    "user": "6adcf1ecbce8550d78e7bfba",
+    "deviceCategory": "Smartphones",
+    "brand": "Apple",
+    "modelName": "iPhone 13 128GB",
+    "specifications": "Battery: 85-90%, Screen: Intact, Casing: Good",
+    "functionalState": {
+      "powersOn": true,
+      "screenIntact": true,
+      "touchResponsive": true,
+      "camerasWork": true,
+      "batteryWorking": true
+    },
+    "cosmeticGrade": "Good (Minor Scratches)",
+    "estimatedValue": 18000,
+    "valuationBreakdown": {
+      "baseModelValue": 20000,
+      "functionalDeductions": 0,
+      "cosmeticMultiplier": 1
+    },
+    "status": "Submitted",
+    "voucherCode": "",
+    "inspectorNotes": "",
+    "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+    "createdAt": "2026-10-24T17:59:08.419Z",
+    "updatedAt": "2026-10-24T17:59:08.419Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcfbdccfd9eff3d9f97655",
+    "user": "6adcfbdbcfd9eff3d9f9763c",
+    "deviceCategory": "Smartphones",
+    "brand": "Apple",
+    "modelName": "iPhone 13 128GB",
+    "specifications": "Battery: 85-90%, Screen: Intact, Casing: Good",
+    "functionalState": {
+      "powersOn": true,
+      "screenIntact": true,
+      "touchResponsive": true,
+      "camerasWork": true,
+      "batteryWorking": true
+    },
+    "cosmeticGrade": "Good (Minor Scratches)",
+    "estimatedValue": 18000,
+    "valuationBreakdown": {
+      "baseModelValue": 20000,
+      "functionalDeductions": 0,
+      "cosmeticMultiplier": 1
+    },
+    "status": "Submitted",
+    "voucherCode": "",
+    "inspectorNotes": "",
+    "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+    "createdAt": "2026-10-24T18:41:32.216Z",
+    "updatedAt": "2026-10-24T18:41:32.216Z",
+    "__v": 0
+  },
+  {
+    "_id": "6add032aa70acf91fb481cf4",
+    "user": "6add032aa70acf91fb481cdd",
+    "deviceCategory": "Smartphones",
+    "brand": "Apple",
+    "modelName": "iPhone 13 128GB",
+    "specifications": "Battery: 85-90%, Screen: Intact, Casing: Good",
+    "functionalState": {
+      "powersOn": true,
+      "screenIntact": true,
+      "touchResponsive": true,
+      "camerasWork": true,
+      "batteryWorking": true
+    },
+    "cosmeticGrade": "Good (Minor Scratches)",
+    "estimatedValue": 18000,
+    "valuationBreakdown": {
+      "baseModelValue": 20000,
+      "functionalDeductions": 0,
+      "cosmeticMultiplier": 1
+    },
+    "status": "Submitted",
+    "voucherCode": "",
+    "inspectorNotes": "",
+    "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+    "createdAt": "2026-10-24T19:12:42.830Z",
+    "updatedAt": "2026-10-24T19:12:42.830Z",
+    "__v": 0
+  }
+]

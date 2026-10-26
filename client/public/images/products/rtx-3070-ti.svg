@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F8FAFC" rx="12" />
+  <!-- Dual Slot Shroud Body -->
+  <rect x="55" y="85" width="290" height="130" rx="10" fill="#18181B" stroke="#3F3F46" stroke-width="3" />
+  <!-- Metal Fin Array Texture -->
+  <line x1="65" y1="100" x2="335" y2="100" stroke="#27272A" stroke-width="4" stroke-dasharray="2,3" />
+  <line x1="65" y1="200" x2="335" y2="200" stroke="#27272A" stroke-width="4" stroke-dasharray="2,3" />
+  <!-- Fan 1 (Left) -->
+  <circle cx="135" cy="150" r="44" fill="#09090B" stroke="#52525B" stroke-width="2" />
+  <circle cx="135" cy="150" r="14" fill="#27272A" />
+  <!-- Fan 1 Blades -->
+  <path d="M135 110 Q140 135 135 150 Q130 135 135 110" fill="#71717A" />
+  <path d="M135 190 Q140 165 135 150 Q130 165 135 190" fill="#71717A" />
+  <path d="M95 150 Q120 155 135 150 Q120 145 95 150" fill="#71717A" />
+  <path d="M175 150 Q150 155 135 150 Q150 145 175 150" fill="#71717A" />
+  <!-- Fan 2 (Right) -->
+  <circle cx="265" cy="150" r="44" fill="#09090B" stroke="#52525B" stroke-width="2" />
+  <circle cx="265" cy="150" r="14" fill="#27272A" />
+  <!-- Fan 2 Blades -->
+  <path d="M265 110 Q270 135 265 150 Q260 135 265 110" fill="#71717A" />
+  <path d="M265 190 Q270 165 265 150 Q260 165 265 190" fill="#71717A" />
+  <path d="M225 150 Q250 155 265 150 Q250 145 225 150" fill="#71717A" />
+  <path d="M305 150 Q280 155 265 150 Q280 145 305 150" fill="#71717A" />
+  <!-- PCIe Gold Connector -->
+  <rect x="100" y="215" width="120" height="6" fill="#EAB308" rx="1" />
+  <!-- Top GEFORCE RTX Badge -->
+  <text x="200" y="105" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="800" fill="#22C55E">GEFORCE RTX 3070 Ti</text>
+  <rect x="14" y="14" width="122" height="22" rx="11" fill="#DCFCE7" />
+  <text x="75" y="29" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#15803D">8GB GDDR6X · GPU</text>
+</svg>

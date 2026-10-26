@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F8FAFC" rx="12" />
+  <!-- Center Prism Hump -->
+  <polygon points="170,95 230,95 245,68 155,68" fill="#18181B" stroke="#3F3F46" stroke-width="2" />
+  <!-- Camera Body -->
+  <rect x="85" y="92" width="230" height="135" rx="10" fill="#18181B" stroke="#3F3F46" stroke-width="2" />
+  <!-- Deep Grip -->
+  <rect x="265" y="92" width="50" height="135" rx="8" fill="#09090B" />
+  <!-- Lens Barrel -->
+  <circle cx="180" cy="160" r="55" fill="#09090B" stroke="#52525B" stroke-width="3" />
+  <circle cx="180" cy="160" r="42" fill="#18181B" stroke="#71717A" stroke-width="1.5" />
+  <circle cx="180" cy="160" r="30" fill="#020617" />
+  <!-- Lens Reflection -->
+  <ellipse cx="170" cy="148" rx="14" ry="7" fill="#06B6D4" opacity="0.6" />
+  <rect x="14" y="14" width="120" height="22" rx="11" fill="#FEE2E2" />
+  <text x="74" y="29" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#DC2626">CANON EOS R50 · 24MP</text>
+</svg>

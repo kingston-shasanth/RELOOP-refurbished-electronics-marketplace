@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F8FAFC" rx="12" />
+  <!-- M.2 2280 PCB Stick -->
+  <rect x="70" y="115" width="260" height="70" rx="4" fill="#022C22" stroke="#065F46" stroke-width="2" />
+  <!-- Gold M.2 Notch & Pins -->
+  <rect x="60" y="125" width="12" height="50" fill="#EAB308" />
+  <!-- Label with Thermal Foil -->
+  <rect x="85" y="123" width="220" height="54" rx="3" fill="#0F172A" />
+  <text x="195" y="145" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" font-weight="900" fill="#FFFFFF">SAMSUNG 980 PRO</text>
+  <text x="195" y="165" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#EF4444">PCIe 4.0 NVMe M.2 · 2TB</text>
+  <rect x="14" y="14" width="138" height="22" rx="11" fill="#FEF3C7" />
+  <text x="83" y="29" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#D97706">SAMSUNG 980 PRO 2TB</text>
+</svg>

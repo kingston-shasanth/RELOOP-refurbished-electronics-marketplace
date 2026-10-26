@@ -1,0 +1,2047 @@
+[
+  {
+    "_id": "6adcd5662597cf60eea39b5e",
+    "productId": "6adcd5662597cf60eea39b5c",
+    "deviceSerialNumber": "RLP-WCABC3-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 96,
+        "cycleCount": 110
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Hinge torque & shell verified under standard pressure tests."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensor noise ratio & microphone input verified."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested with sweep frequency."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+      }
+    },
+    "partsReplaced": [
+      {
+        "partName": "OEM Certified Battery Pack",
+        "replacementType": "OEM Original",
+        "date": "2026-10-15T00:00:00.000Z",
+        "_id": "6adcd5662597cf60eea39b5f"
+      }
+    ],
+    "carbonOffsetKg": 52.4,
+    "eWastePreventedGrams": 1650,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T15:57:26.081Z",
+    "createdAt": "2026-10-24T15:57:26.082Z",
+    "updatedAt": "2026-10-24T15:57:26.082Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcd5662597cf60eea39b64",
+    "productId": "6adcd5662597cf60eea39b62",
+    "deviceSerialNumber": "RLP-AN1OPY-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 94,
+        "cycleCount": 110
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Hinge torque & shell verified under standard pressure tests."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensor noise ratio & microphone input verified."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested with sweep frequency."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+      }
+    },
+    "partsReplaced": [
+      {
+        "partName": "OEM Certified Battery Pack",
+        "replacementType": "OEM Original",
+        "date": "2026-10-15T00:00:00.000Z",
+        "_id": "6adcd5662597cf60eea39b65"
+      }
+    ],
+    "carbonOffsetKg": 52.4,
+    "eWastePreventedGrams": 1650,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T15:57:26.089Z",
+    "createdAt": "2026-10-24T15:57:26.090Z",
+    "updatedAt": "2026-10-24T15:57:26.090Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcd5662597cf60eea39b6a",
+    "productId": "6adcd5662597cf60eea39b68",
+    "deviceSerialNumber": "RLP-3RAGHZ-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 88,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Minor Blemish",
+        "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 88,
+        "cycleCount": 110
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Hinge torque & shell verified under standard pressure tests."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensor noise ratio & microphone input verified."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested with sweep frequency."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+      }
+    },
+    "partsReplaced": [],
+    "carbonOffsetKg": 52.4,
+    "eWastePreventedGrams": 1650,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T15:57:26.096Z",
+    "createdAt": "2026-10-24T15:57:26.097Z",
+    "updatedAt": "2026-10-24T15:57:26.097Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcd5662597cf60eea39b6f",
+    "productId": "6adcd5662597cf60eea39b6d",
+    "deviceSerialNumber": "RLP-4YPVIZ-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 91,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Light signs of cosmetic handling on edge bezel. Ceramic Shield glass is 100% blemish-free. 91% battery health."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "partsReplaced": [],
+    "carbonOffsetKg": 52.4,
+    "eWastePreventedGrams": 1650,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T15:57:26.103Z",
+    "createdAt": "2026-10-24T15:57:26.103Z",
+    "updatedAt": "2026-10-24T17:36:10.412Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcd5662597cf60eea39b74",
+    "productId": "6adcd5662597cf60eea39b72",
+    "deviceSerialNumber": "RLP-EGODK9-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Minor Blemish",
+        "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 93,
+        "cycleCount": 110
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Hinge torque & shell verified under standard pressure tests."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensor noise ratio & microphone input verified."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested with sweep frequency."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+      }
+    },
+    "partsReplaced": [],
+    "carbonOffsetKg": 52.4,
+    "eWastePreventedGrams": 1650,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T15:57:26.108Z",
+    "createdAt": "2026-10-24T15:57:26.109Z",
+    "updatedAt": "2026-10-24T15:57:26.109Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcd5662597cf60eea39b79",
+    "productId": "6adcd5662597cf60eea39b77",
+    "deviceSerialNumber": "RLP-I41FUY-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 88,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Minor Blemish",
+        "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 95,
+        "cycleCount": 110
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Hinge torque & shell verified under standard pressure tests."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensor noise ratio & microphone input verified."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested with sweep frequency."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+      }
+    },
+    "partsReplaced": [],
+    "carbonOffsetKg": 52.4,
+    "eWastePreventedGrams": 1650,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T15:57:26.113Z",
+    "createdAt": "2026-10-24T15:57:26.114Z",
+    "updatedAt": "2026-10-24T15:57:26.114Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcd5662597cf60eea39b7e",
+    "productId": "6adcd5662597cf60eea39b7c",
+    "deviceSerialNumber": "RLP-XVO2FW-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 95,
+        "cycleCount": 110
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Hinge torque & shell verified under standard pressure tests."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensor noise ratio & microphone input verified."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested with sweep frequency."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+      }
+    },
+    "partsReplaced": [
+      {
+        "partName": "OEM Certified Battery Pack",
+        "replacementType": "OEM Original",
+        "date": "2026-10-15T00:00:00.000Z",
+        "_id": "6adcd5662597cf60eea39b7f"
+      }
+    ],
+    "carbonOffsetKg": 52.4,
+    "eWastePreventedGrams": 1650,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T15:57:26.120Z",
+    "createdAt": "2026-10-24T15:57:26.121Z",
+    "updatedAt": "2026-10-24T15:57:26.121Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcd5662597cf60eea39b84",
+    "productId": "6adcd5662597cf60eea39b82",
+    "deviceSerialNumber": "RLP-0VDXKK-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Minor Blemish",
+        "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 90,
+        "cycleCount": 110
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Hinge torque & shell verified under standard pressure tests."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensor noise ratio & microphone input verified."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested with sweep frequency."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+      }
+    },
+    "partsReplaced": [],
+    "carbonOffsetKg": 52.4,
+    "eWastePreventedGrams": 1650,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T15:57:26.125Z",
+    "createdAt": "2026-10-24T15:57:26.126Z",
+    "updatedAt": "2026-10-24T15:57:26.126Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcd5662597cf60eea39b89",
+    "productId": "6adcd5662597cf60eea39b87",
+    "deviceSerialNumber": "RLP-Q986BP-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Minor Blemish",
+        "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 100,
+        "cycleCount": 110
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Hinge torque & shell verified under standard pressure tests."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensor noise ratio & microphone input verified."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested with sweep frequency."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+      }
+    },
+    "partsReplaced": [],
+    "carbonOffsetKg": 52.4,
+    "eWastePreventedGrams": 1650,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T15:57:26.130Z",
+    "createdAt": "2026-10-24T15:57:26.130Z",
+    "updatedAt": "2026-10-24T15:57:26.130Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0993",
+    "productId": "6adcec8ac3352121b4bc098f",
+    "deviceSerialNumber": "RLP-APPLE-MA-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 96,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Minimal signs of use. Flawless display, 96% original battery capacity, and certified logic board."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.329Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.331Z",
+    "updatedAt": "2026-10-24T17:36:10.331Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc099a",
+    "productId": "6adcec8ac3352121b4bc0997",
+    "deviceSerialNumber": "RLP-DELL-XPS-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 94,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Factory certified renewed. Pristine CNC aluminium chassis, carbon fibre palm rest, 94% battery health."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.348Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.349Z",
+    "updatedAt": "2026-10-24T17:36:10.349Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09a1",
+    "productId": "6adcec8ac3352121b4bc099e",
+    "deviceSerialNumber": "RLP-HP-PAVIL-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 88,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Fully functional. Minor micro-scratches on outer lid. Verified keyboard, trackpad, and battery."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.362Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.363Z",
+    "updatedAt": "2026-10-24T17:36:10.363Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09a8",
+    "productId": "6adcec8ac3352121b4bc09a5",
+    "deviceSerialNumber": "RLP-LENOVO-T-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 90,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Business-grade durability. MIL-STD 810H certified, pristine matte black body, 90% battery health."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.378Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.378Z",
+    "updatedAt": "2026-10-24T17:36:10.378Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09af",
+    "productId": "6adcec8ac3352121b4bc09ac",
+    "deviceSerialNumber": "RLP-ASUS-ROG-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 92,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "High-performance renewed gaming machine. Thermal repaste completed with liquid metal; 92% battery capacity."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.390Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.390Z",
+    "updatedAt": "2026-10-24T17:36:10.390Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09ba",
+    "productId": "6adcec8ac3352121b4bc09b7",
+    "deviceSerialNumber": "RLP-SAMSUNG--2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 93,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Tested 50-point diagnostics passed. Dynamic AMOLED 2X 120Hz display with zero burn-in. 93% battery health."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.423Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.423Z",
+    "updatedAt": "2026-10-24T17:36:10.423Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09c1",
+    "productId": "6adcec8ac3352121b4bc09be",
+    "deviceSerialNumber": "RLP-GOOGLE-P-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 92,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Industry-leading computational photography. Clean matte aluminium visor, flawless camera glass; 92% battery capacity."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.431Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.431Z",
+    "updatedAt": "2026-10-24T17:36:10.431Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09c8",
+    "productId": "6adcec8ac3352121b4bc09c5",
+    "deviceSerialNumber": "RLP-ONEPLUS--2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 89,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Certified Grade A. 80W SuperVOOC rapid charging verified; ceramic camera enclosure intact."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.438Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.438Z",
+    "updatedAt": "2026-10-24T17:36:10.438Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09cf",
+    "productId": "6adcec8ac3352121b4bc09cc",
+    "deviceSerialNumber": "RLP-APPLE-IP-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 95,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Flawless Liquid Retina screen, Apple Pencil 2 magnetic pairing tested, 95% battery capacity."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.444Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.445Z",
+    "updatedAt": "2026-10-24T17:36:10.445Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09d6",
+    "productId": "6adcec8ac3352121b4bc09d3",
+    "deviceSerialNumber": "RLP-SAMSUNG--2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 94,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Includes original renewed ultra-low-latency S-Pen. 120Hz display with zero scratches, 94% battery health."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.451Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.451Z",
+    "updatedAt": "2026-10-24T17:36:10.451Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09dd",
+    "productId": "6adcec8ac3352121b4bc09da",
+    "deviceSerialNumber": "RLP-APPLE-IP-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 93,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Pro-grade tablet renewed to factory condition. ProMotion 120Hz screen tested with zero pressure marks."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.457Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.457Z",
+    "updatedAt": "2026-10-24T17:36:10.457Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09e4",
+    "productId": "6adcec8ac3352121b4bc09e1",
+    "deviceSerialNumber": "RLP-LENOVO-T-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 91,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Cinematic 2.5K 120Hz OLED display with Dolby Vision. Quad JBL speakers calibrated."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.463Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.463Z",
+    "updatedAt": "2026-10-24T17:36:10.463Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09eb",
+    "productId": "6adcec8ac3352121b4bc09e8",
+    "deviceSerialNumber": "RLP-SONY-WH--2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 95,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Sanitized with hospital-grade UV-C and ultrasound. Acoustic drivers re-calibrated; active noise cancellation verified."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.469Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.470Z",
+    "updatedAt": "2026-10-24T17:36:10.470Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09f2",
+    "productId": "6adcec8ac3352121b4bc09ef",
+    "deviceSerialNumber": "RLP-APPLE-AI-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 96,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Fully sanitized with all silicone ear-tip sizes brand-new sealed. H2 chip spatial audio certified."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.476Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.477Z",
+    "updatedAt": "2026-10-24T17:36:10.477Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc09f9",
+    "productId": "6adcec8ac3352121b4bc09f6",
+    "deviceSerialNumber": "RLP-BOSE-NOI-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 92,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Premium stainless-steel headband and synthetic leather cushions. 11 levels of active noise cancelling tested."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.482Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.483Z",
+    "updatedAt": "2026-10-24T17:36:10.483Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a00",
+    "productId": "6adcec8ac3352121b4bc09fd",
+    "deviceSerialNumber": "RLP-JBL-CHAR-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 94,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "IP67 waterproof and dustproof tested. Dual passive radiators and racetrack driver deliver rich bass."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.488Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.489Z",
+    "updatedAt": "2026-10-24T17:36:10.489Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a07",
+    "productId": "6adcec8ac3352121b4bc0a04",
+    "deviceSerialNumber": "RLP-APPLE-WA-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 91,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Always-On Retina display with zero pixel anomalies. Blood Oxygen and ECG sensors calibrated."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.495Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.496Z",
+    "updatedAt": "2026-10-24T17:36:10.496Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a0e",
+    "productId": "6adcec8ac3352121b4bc0a0b",
+    "deviceSerialNumber": "RLP-SAMSUNG--2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 88,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Physical rotating bezel serviced and smooth. BioActive sensor (BIA body composition + ECG) verified."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.503Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.503Z",
+    "updatedAt": "2026-10-24T17:36:10.503Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a15",
+    "productId": "6adcec8ac3352121b4bc0a12",
+    "deviceSerialNumber": "RLP-GARMIN-F-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 96,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Transflective MIP sunlight-readable display. Multi-band GPS location lock verified."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.509Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.510Z",
+    "updatedAt": "2026-10-24T17:36:10.510Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a1c",
+    "productId": "6adcec8ac3352121b4bc0a19",
+    "deviceSerialNumber": "RLP-FITBIT-S-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 90,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 87,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Stress management EDA scan and skin temperature sensors functional. Clean AMOLED touch panel."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.515Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.516Z",
+    "updatedAt": "2026-10-24T17:36:10.516Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a23",
+    "productId": "6adcec8ac3352121b4bc0a20",
+    "deviceSerialNumber": "RLP-SONY-PLA-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Not Applicable",
+        "healthPercent": null,
+        "cycleCount": null
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Internal heatsink and fan dust extraction performed. HDMI 2.1 4K 120Hz output tested."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.521Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.521Z",
+    "updatedAt": "2026-10-24T17:36:10.521Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a2a",
+    "productId": "6adcec8ac3352121b4bc0a27",
+    "deviceSerialNumber": "RLP-NINTENDO-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 95,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "7.0-inch OLED screen 100% blemish free. Joy-Con analogue sticks tested for zero drift; 95% battery capacity."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.527Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.527Z",
+    "updatedAt": "2026-10-24T17:36:10.527Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a31",
+    "productId": "6adcec8ac3352121b4bc0a2e",
+    "deviceSerialNumber": "RLP-MICROSOF-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Not Applicable",
+        "healthPercent": null,
+        "cycleCount": null
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Monolithic tower inspected and thermal cycle verified. 12 TFLOPS GPU delivers 4K 60/120FPS gaming."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.533Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.533Z",
+    "updatedAt": "2026-10-24T17:36:10.533Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a38",
+    "productId": "6adcec8ac3352121b4bc0a35",
+    "deviceSerialNumber": "RLP-VALVE-ST-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 92,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "Premium anti-glare chemically etched glass model. Dual haptic trackpads and all buttons fully tested."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.540Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.540Z",
+    "updatedAt": "2026-10-24T17:36:10.540Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a3f",
+    "productId": "6adcec8ac3352121b4bc0a3c",
+    "deviceSerialNumber": "RLP-SONY-ALP-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 94,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Shutter actuation count: under 4,200 cycles. Sensor wet-cleaned in ISO Class 5 cleanroom; 0 dust spots."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.546Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.547Z",
+    "updatedAt": "2026-10-24T17:36:10.547Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a46",
+    "productId": "6adcec8ac3352121b4bc0a43",
+    "deviceSerialNumber": "RLP-CANON-EO-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 95,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Lightweight content creator mirrorless. Optical image stabilizer tested; pristine element glass with zero haze."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.552Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.552Z",
+    "updatedAt": "2026-10-24T17:36:10.552Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a4d",
+    "productId": "6adcec8ac3352121b4bc0a4a",
+    "deviceSerialNumber": "RLP-FUJIFILM-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 94,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 90,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Micro-scratches",
+        "notes": "26.1MP X-Trans CMOS 4 sensor with 5-axis IBIS. Authentic film simulation modes all calibrated."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.558Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.558Z",
+    "updatedAt": "2026-10-24T17:36:10.558Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a54",
+    "productId": "6adcec8ac3352121b4bc0a51",
+    "deviceSerialNumber": "RLP-GOPRO-HE-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 96,
+        "cycleCount": 85
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Water-tight rubber gasket pressure tested to 10m depth. HyperSmooth 5.0 horizon lock verified."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.563Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.564Z",
+    "updatedAt": "2026-10-24T17:36:10.564Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a5b",
+    "productId": "6adcec8ac3352121b4bc0a58",
+    "deviceSerialNumber": "RLP-NVIDIA-G-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Not Applicable",
+        "healthPercent": null,
+        "cycleCount": null
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Stress tested: FurMark 4K 2-hour burn-in passed with peak temperature at 68°C. Thermal pads renewed."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.570Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.570Z",
+    "updatedAt": "2026-10-24T17:36:10.570Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a62",
+    "productId": "6adcec8ac3352121b4bc0a5f",
+    "deviceSerialNumber": "RLP-AMD-RYZE-2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Not Applicable",
+        "healthPercent": null,
+        "cycleCount": null
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Tested 100% stable under Prime95 Small FFTs. Zero bent pins; heatspreader clean without scratches."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.576Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.576Z",
+    "updatedAt": "2026-10-24T17:36:10.576Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a69",
+    "productId": "6adcec8ac3352121b4bc0a66",
+    "deviceSerialNumber": "RLP-CORSAIR--2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Not Applicable",
+        "healthPercent": null,
+        "cycleCount": null
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "MemTest86 4-pass certified 0 errors at rated XMP 2.0 3600MHz profile. Dynamic RGB light bar tested."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.582Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.582Z",
+    "updatedAt": "2026-10-24T17:36:10.582Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcec8ac3352121b4bc0a70",
+    "productId": "6adcec8ac3352121b4bc0a6d",
+    "deviceSerialNumber": "RLP-SAMSUNG--2026",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 98,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Color uniformity, backlight integrity, and touch response certified within OEM limits."
+      },
+      "battery": {
+        "status": "Not Applicable",
+        "healthPercent": null,
+        "cycleCount": null
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "SMART health 100% with only 12 TBW written. Read speeds verified at 6,980 MB/s on PCIe 4.0 testbench."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All I/O connectors, USB power delivery and contacts ultrasonic-cleaned and impedance-tested."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Sensors, gyroscopes, biometric scanners and optics calibrated against laboratory baseline."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Acoustic frequency response and stereo balance verified."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi 6 and Bluetooth 5.x throughput tested under sustained packet transfer."
+      }
+    },
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T17:36:10.589Z",
+    "partsReplaced": [],
+    "createdAt": "2026-10-24T17:36:10.589Z",
+    "updatedAt": "2026-10-24T17:36:10.589Z",
+    "__v": 0
+  },
+  {
+    "_id": "6add04301156e2a85271e2c7",
+    "productId": "6add04301156e2a85271e2c5",
+    "deviceSerialNumber": "RLP-MVMS5XD2",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 95,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Display tested for dead pixels and backlight uniformity."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 92,
+        "cycleCount": 140
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Chassis structurally intact."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All ports power delivery verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Cameras, mics, and sensors calibrated."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi & Bluetooth signal verified."
+      }
+    },
+    "partsReplaced": [],
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T19:17:04.168Z",
+    "createdAt": "2026-10-24T19:17:04.169Z",
+    "updatedAt": "2026-10-24T19:17:04.169Z",
+    "__v": 0
+  },
+  {
+    "_id": "6add0488c9a5125d60442753",
+    "productId": "6add0488c9a5125d60442751",
+    "deviceSerialNumber": "RLP-MVMS7TU4",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 95,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Display tested for dead pixels and backlight uniformity."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 92,
+        "cycleCount": 140
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Chassis structurally intact."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All ports power delivery verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Cameras, mics, and sensors calibrated."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi & Bluetooth signal verified."
+      }
+    },
+    "partsReplaced": [],
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T19:18:32.910Z",
+    "createdAt": "2026-10-24T19:18:32.910Z",
+    "updatedAt": "2026-10-24T19:18:32.910Z",
+    "__v": 0
+  },
+  {
+    "_id": "6add08343279c1077828f584",
+    "productId": "6add08343279c1077828f582",
+    "deviceSerialNumber": "RLP-MVMSRYSQ",
+    "inspectorName": "RELOOP Certified Lab",
+    "diagnosticSummaryScore": 96,
+    "subsystemChecks": {
+      "screen": {
+        "status": "Pass",
+        "notes": "Display tested for dead pixels and backlight uniformity."
+      },
+      "battery": {
+        "status": "Pass",
+        "healthPercent": 95,
+        "cycleCount": 140
+      },
+      "chassis": {
+        "status": "Flawless",
+        "notes": "Chassis structurally intact."
+      },
+      "portsAndCharging": {
+        "status": "Pass",
+        "notes": "All ports power delivery verified."
+      },
+      "camerasAndSensors": {
+        "status": "Pass",
+        "notes": "Cameras, mics, and sensors calibrated."
+      },
+      "audioAndMics": {
+        "status": "Pass",
+        "notes": "Stereo drivers tested."
+      },
+      "connectivityWifiBt": {
+        "status": "Pass",
+        "notes": "Wi-Fi & Bluetooth signal verified."
+      }
+    },
+    "partsReplaced": [],
+    "carbonOffsetKg": 45.2,
+    "eWastePreventedGrams": 1850,
+    "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+    "inspectionDate": "2026-10-24T19:34:12.459Z",
+    "createdAt": "2026-10-24T19:34:12.460Z",
+    "updatedAt": "2026-10-24T19:34:12.460Z",
+    "__v": 0
+  }
+]

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F8FAFC" rx="12" />
+  <!-- Rugged Action Camera Body -->
+  <rect x="120" y="75" width="160" height="150" rx="18" fill="#18181B" stroke="#0284C7" stroke-width="2.5" />
+  <!-- Front LCD Screen -->
+  <rect x="135" y="105" width="55" height="55" rx="6" fill="#0284C7" opacity="0.9" />
+  <text x="162" y="137" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">5.3K</text>
+  <!-- Lens Housing Square -->
+  <rect x="205" y="95" width="65" height="65" rx="10" fill="#09090B" stroke="#38BDF8" stroke-width="2" />
+  <circle cx="237" cy="127" r="24" fill="#020617" />
+  <circle cx="237" cy="127" r="14" fill="#082F49" />
+  <rect x="14" y="14" width="138" height="22" rx="11" fill="#E0F2FE" />
+  <text x="83" y="29" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0284C7">GOPRO HERO11 · 5.3K</text>
+</svg>

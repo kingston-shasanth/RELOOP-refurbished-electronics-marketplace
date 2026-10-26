@@ -1,0 +1,1511 @@
+{
+  "timestamp": "2026-10-24T17:16:31.266Z",
+  "products": [
+    {
+      "_id": "6adcd5662597cf60eea39b5c",
+      "title": "Apple MacBook Air M1 (2020)",
+      "slug": "apple-macbook-air-m1-2020",
+      "brand": "Apple",
+      "category": "Laptops",
+      "subcategory": "Ultrabook",
+      "refurbishedPrice": 45999,
+      "originalRetailPrice": 62900,
+      "stockCount": 8,
+      "conditionGrade": "Pristine",
+      "conditionSummary": "Minimal signs of use. Flawless display, 96% original battery capacity, and certified logic board.",
+      "images": [
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80"
+      ],
+      "primaryImage": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&auto=format&fit=crop&q=80",
+      "specifications": {
+        "processor": "Apple M1 Chip (8-Core CPU / 7-Core GPU)",
+        "ram": "8GB Unified Memory",
+        "storage": "256GB PCIe NVMe SSD",
+        "display": "13.3-inch Retina Display with True Tone",
+        "graphics": "Integrated Apple 7-Core GPU",
+        "os": "macOS Sequoia",
+        "color": "Space Grey",
+        "batteryHealthPercent": 96
+      },
+      "warrantyMonths": 12,
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewCount": 216,
+      "createdAt": "2026-10-24T15:57:26.073Z",
+      "updatedAt": "2026-10-24T15:57:26.084Z",
+      "__v": 0,
+      "digitalPassportId": "6adcd5662597cf60eea39b5e"
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b62",
+      "title": "Dell XPS 13 9310 (i7 / 16GB)",
+      "slug": "dell-xps-13-9310-i7",
+      "brand": "Dell",
+      "category": "Laptops",
+      "subcategory": "Ultrabook",
+      "refurbishedPrice": 52999,
+      "originalRetailPrice": 74990,
+      "stockCount": 7,
+      "conditionGrade": "Pristine",
+      "conditionSummary": "Factory certified renewed. Pristine CNC aluminium chassis, carbon fibre palm rest, 94% battery health.",
+      "images": [
+        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80"
+      ],
+      "primaryImage": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&auto=format&fit=crop&q=80",
+      "specifications": {
+        "processor": "Intel Core i7-1185G7 (4.80 GHz)",
+        "ram": "16GB LPDDR4x Dual Channel",
+        "storage": "512GB M.2 NVMe SSD",
+        "display": "13.4-inch FHD+ (1920 x 1200) InfinityEdge",
+        "graphics": "Intel Iris Xe Graphics",
+        "os": "Windows 11 Pro",
+        "color": "Platinum Silver",
+        "batteryHealthPercent": 94
+      },
+      "warrantyMonths": 12,
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.7,
+      "reviewCount": 128,
+      "createdAt": "2026-10-24T15:57:26.087Z",
+      "updatedAt": "2026-10-24T15:57:26.092Z",
+      "__v": 0,
+      "digitalPassportId": "6adcd5662597cf60eea39b64"
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b68",
+      "title": "HP Pavilion 15 (Ryzen 5 / 8GB)",
+      "slug": "hp-pavilion-15-ryzen-5",
+      "brand": "HP",
+      "category": "Laptops",
+      "subcategory": "Everyday Laptop",
+      "refurbishedPrice": 32999,
+      "originalRetailPrice": 48990,
+      "stockCount": 5,
+      "conditionGrade": "Good",
+      "conditionSummary": "Fully functional. Minor micro-scratches on outer lid. Verified keyboard, trackpad, and battery.",
+      "images": [
+        "https://images.unsplash.com/photo-1544731612-de2f963c631e?w=800&auto=format&fit=crop&q=80"
+      ],
+      "primaryImage": "https://images.unsplash.com/photo-1544731612-de2f963c631e?w=800&auto=format&fit=crop&q=80",
+      "specifications": {
+        "processor": "AMD Ryzen 5 5500U (6-Core, 12-Thread)",
+        "ram": "8GB DDR4 3200MHz",
+        "storage": "512GB PCIe NVMe SSD",
+        "display": "15.6-inch Micro-edge Anti-glare FHD",
+        "graphics": "AMD Radeon Graphics",
+        "os": "Windows 11 Home",
+        "color": "Natural Silver",
+        "batteryHealthPercent": 88
+      },
+      "warrantyMonths": 6,
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.3,
+      "reviewCount": 94,
+      "createdAt": "2026-10-24T15:57:26.094Z",
+      "updatedAt": "2026-10-24T15:57:26.099Z",
+      "__v": 0,
+      "digitalPassportId": "6adcd5662597cf60eea39b6a"
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b6d",
+      "title": "Apple iPhone 13 (128GB Midnight)",
+      "slug": "apple-iphone-13-128gb",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "subcategory": "Flagship",
+      "refurbishedPrice": 29999,
+      "originalRetailPrice": 39900,
+      "stockCount": 12,
+      "conditionGrade": "Excellent",
+      "conditionSummary": "Light signs of cosmetic handling on edge bezel. Ceramic Shield glass is 100% blemish-free. 91% battery health.",
+      "images": [
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&auto=format&fit=crop&q=80"
+      ],
+      "primaryImage": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
+      "specifications": {
+        "processor": "A15 Bionic Chip",
+        "ram": "4GB RAM",
+        "storage": "128GB Storage",
+        "display": "6.1-inch Super Retina XDR OLED",
+        "graphics": "Apple 4-Core GPU",
+        "os": "iOS 18",
+        "color": "Midnight Black",
+        "batteryHealthPercent": 91
+      },
+      "warrantyMonths": 6,
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewCount": 310,
+      "createdAt": "2026-10-24T15:57:26.101Z",
+      "updatedAt": "2026-10-24T15:57:26.105Z",
+      "__v": 0,
+      "digitalPassportId": "6adcd5662597cf60eea39b6f"
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b72",
+      "title": "Samsung Galaxy S22 5G (128GB)",
+      "slug": "samsung-galaxy-s22-128gb",
+      "brand": "Samsung",
+      "category": "Smartphones",
+      "subcategory": "Flagship",
+      "refurbishedPrice": 26499,
+      "originalRetailPrice": 42900,
+      "stockCount": 19,
+      "conditionGrade": "Excellent",
+      "conditionSummary": "Tested 50-point diagnostics passed. Dynamic AMOLED 2X 120Hz display with zero burn-in. 93% battery health.",
+      "images": [
+        "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&auto=format&fit=crop&q=80"
+      ],
+      "primaryImage": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&auto=format&fit=crop&q=80",
+      "specifications": {
+        "processor": "Snapdragon 8 Gen 1 (4nm)",
+        "ram": "8GB LPDDR5",
+        "storage": "128GB UFS 3.1",
+        "display": "6.1-inch Dynamic AMOLED 2X 120Hz HDR10+",
+        "graphics": "Adreno 730",
+        "os": "Android 14 (One UI 6)",
+        "color": "Phantom Black",
+        "batteryHealthPercent": 93
+      },
+      "warrantyMonths": 12,
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.6,
+      "reviewCount": 175,
+      "createdAt": "2026-10-24T15:57:26.106Z",
+      "updatedAt": "2026-10-24T15:57:26.110Z",
+      "__v": 0,
+      "digitalPassportId": "6adcd5662597cf60eea39b74"
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b77",
+      "title": "Sony WH-1000XM4 Noise Cancelling",
+      "slug": "sony-wh-1000xm4-black",
+      "brand": "Sony",
+      "category": "Audio",
+      "subcategory": "Over-ear Headphones",
+      "refurbishedPrice": 14999,
+      "originalRetailPrice": 24990,
+      "stockCount": 4,
+      "conditionGrade": "Good",
+      "conditionSummary": "Ear pads sanitized and acoustically tested. Industry-leading ANC performance verified across all frequencies.",
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80"
+      ],
+      "primaryImage": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80",
+      "specifications": {
+        "processor": "HD Noise Cancelling Processor QN1",
+        "ram": "N/A",
+        "storage": "N/A",
+        "display": "Touch Sensor Controls",
+        "graphics": "N/A",
+        "os": "Sony Headphones Connect App",
+        "color": "Matte Black",
+        "batteryHealthPercent": 95
+      },
+      "warrantyMonths": 6,
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewCount": 420,
+      "createdAt": "2026-10-24T15:57:26.112Z",
+      "updatedAt": "2026-10-24T15:57:26.116Z",
+      "__v": 0,
+      "digitalPassportId": "6adcd5662597cf60eea39b79"
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b7c",
+      "title": "Apple iPad Air 4th Gen (64GB Wi-Fi)",
+      "slug": "apple-ipad-air-4-64gb",
+      "brand": "Apple",
+      "category": "Tablets",
+      "subcategory": "Tablet",
+      "refurbishedPrice": 32999,
+      "originalRetailPrice": 46000,
+      "stockCount": 6,
+      "conditionGrade": "Pristine",
+      "conditionSummary": "Flawless Liquid Retina screen, Apple Pencil 2 magnetic pairing tested, 95% battery capacity.",
+      "images": [
+        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80"
+      ],
+      "primaryImage": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80",
+      "specifications": {
+        "processor": "Apple A14 Bionic (6-Core)",
+        "ram": "4GB RAM",
+        "storage": "64GB Storage",
+        "display": "10.9-inch Liquid Retina with True Tone",
+        "graphics": "Apple 4-Core GPU",
+        "os": "iPadOS 18",
+        "color": "Space Grey",
+        "batteryHealthPercent": 95
+      },
+      "warrantyMonths": 12,
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.7,
+      "reviewCount": 88,
+      "createdAt": "2026-10-24T15:57:26.118Z",
+      "updatedAt": "2026-10-24T15:57:26.123Z",
+      "__v": 0,
+      "digitalPassportId": "6adcd5662597cf60eea39b7e"
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b82",
+      "title": "Lenovo ThinkPad T14 Gen 2 (i5 / 16GB)",
+      "slug": "lenovo-thinkpad-t14-gen-2",
+      "brand": "Lenovo",
+      "category": "Laptops",
+      "subcategory": "Business Laptop",
+      "refurbishedPrice": 36500,
+      "originalRetailPrice": 54000,
+      "stockCount": 6,
+      "conditionGrade": "Excellent",
+      "conditionSummary": "Enterprise-grade durability. Legendary spill-resistant keyboard, biometric fingerprint reader verified.",
+      "images": [
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80"
+      ],
+      "primaryImage": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80",
+      "specifications": {
+        "processor": "Intel Core i5-1135G7 (4.20 GHz)",
+        "ram": "16GB DDR4 3200MHz",
+        "storage": "256GB PCIe NVMe SSD",
+        "display": "14.0-inch FHD (1920 x 1080) IPS Anti-glare",
+        "graphics": "Intel Iris Xe Graphics",
+        "os": "Windows 11 Pro",
+        "color": "Black",
+        "batteryHealthPercent": 90
+      },
+      "warrantyMonths": 12,
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.6,
+      "reviewCount": 65,
+      "createdAt": "2026-10-24T15:57:26.124Z",
+      "updatedAt": "2026-10-24T16:25:51.146Z",
+      "__v": 0,
+      "digitalPassportId": "6adcd5662597cf60eea39b84"
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b87",
+      "title": "NVIDIA GeForce RTX 3070 Ti (8GB GDDR6X)",
+      "slug": "nvidia-geforce-rtx-3070-ti-8gb",
+      "brand": "NVIDIA",
+      "category": "PC Components",
+      "subcategory": "Graphics Card",
+      "refurbishedPrice": 28999,
+      "originalRetailPrice": 45000,
+      "stockCount": 1,
+      "conditionGrade": "Excellent",
+      "conditionSummary": "Stress-tested with 3DMark TimeSpy and FurMark for 4 hours. Fresh Arctic MX-4 thermal paste applied.",
+      "images": [
+        "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&auto=format&fit=crop&q=80"
+      ],
+      "primaryImage": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&auto=format&fit=crop&q=80",
+      "specifications": {
+        "processor": "GA104-400-A1 GPU (6144 CUDA Cores)",
+        "ram": "8GB GDDR6X (256-bit)",
+        "storage": "N/A",
+        "display": "3x DisplayPort 1.4a, 1x HDMI 2.1",
+        "graphics": "Ray Tracing Cores 2nd Gen, Tensor Cores 3rd Gen",
+        "os": "PCIe 4.0 Support",
+        "color": "Gunmetal Silver",
+        "batteryHealthPercent": 100
+      },
+      "warrantyMonths": 6,
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewCount": 42,
+      "createdAt": "2026-10-24T15:57:26.128Z",
+      "updatedAt": "2026-10-24T16:24:04.336Z",
+      "__v": 0,
+      "digitalPassportId": "6adcd5662597cf60eea39b89"
+    }
+  ],
+  "digitalpassports": [
+    {
+      "_id": "6adcd5662597cf60eea39b5e",
+      "productId": "6adcd5662597cf60eea39b5c",
+      "deviceSerialNumber": "RLP-WCABC3-2026",
+      "inspectorName": "RELOOP Certified Lab",
+      "diagnosticSummaryScore": 98,
+      "subsystemChecks": {
+        "screen": {
+          "status": "Pass",
+          "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+        },
+        "battery": {
+          "status": "Pass",
+          "healthPercent": 96,
+          "cycleCount": 110
+        },
+        "chassis": {
+          "status": "Flawless",
+          "notes": "Hinge torque & shell verified under standard pressure tests."
+        },
+        "portsAndCharging": {
+          "status": "Pass",
+          "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+        },
+        "camerasAndSensors": {
+          "status": "Pass",
+          "notes": "Sensor noise ratio & microphone input verified."
+        },
+        "audioAndMics": {
+          "status": "Pass",
+          "notes": "Stereo drivers tested with sweep frequency."
+        },
+        "connectivityWifiBt": {
+          "status": "Pass",
+          "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+        }
+      },
+      "partsReplaced": [
+        {
+          "partName": "OEM Certified Battery Pack",
+          "replacementType": "OEM Original",
+          "date": "2026-10-15T00:00:00.000Z",
+          "_id": "6adcd5662597cf60eea39b5f"
+        }
+      ],
+      "carbonOffsetKg": 52.4,
+      "eWastePreventedGrams": 1650,
+      "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+      "inspectionDate": "2026-10-24T15:57:26.081Z",
+      "createdAt": "2026-10-24T15:57:26.082Z",
+      "updatedAt": "2026-10-24T15:57:26.082Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b64",
+      "productId": "6adcd5662597cf60eea39b62",
+      "deviceSerialNumber": "RLP-AN1OPY-2026",
+      "inspectorName": "RELOOP Certified Lab",
+      "diagnosticSummaryScore": 98,
+      "subsystemChecks": {
+        "screen": {
+          "status": "Pass",
+          "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+        },
+        "battery": {
+          "status": "Pass",
+          "healthPercent": 94,
+          "cycleCount": 110
+        },
+        "chassis": {
+          "status": "Flawless",
+          "notes": "Hinge torque & shell verified under standard pressure tests."
+        },
+        "portsAndCharging": {
+          "status": "Pass",
+          "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+        },
+        "camerasAndSensors": {
+          "status": "Pass",
+          "notes": "Sensor noise ratio & microphone input verified."
+        },
+        "audioAndMics": {
+          "status": "Pass",
+          "notes": "Stereo drivers tested with sweep frequency."
+        },
+        "connectivityWifiBt": {
+          "status": "Pass",
+          "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+        }
+      },
+      "partsReplaced": [
+        {
+          "partName": "OEM Certified Battery Pack",
+          "replacementType": "OEM Original",
+          "date": "2026-10-15T00:00:00.000Z",
+          "_id": "6adcd5662597cf60eea39b65"
+        }
+      ],
+      "carbonOffsetKg": 52.4,
+      "eWastePreventedGrams": 1650,
+      "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+      "inspectionDate": "2026-10-24T15:57:26.089Z",
+      "createdAt": "2026-10-24T15:57:26.090Z",
+      "updatedAt": "2026-10-24T15:57:26.090Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b6a",
+      "productId": "6adcd5662597cf60eea39b68",
+      "deviceSerialNumber": "RLP-3RAGHZ-2026",
+      "inspectorName": "RELOOP Certified Lab",
+      "diagnosticSummaryScore": 88,
+      "subsystemChecks": {
+        "screen": {
+          "status": "Minor Blemish",
+          "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+        },
+        "battery": {
+          "status": "Pass",
+          "healthPercent": 88,
+          "cycleCount": 110
+        },
+        "chassis": {
+          "status": "Micro-scratches",
+          "notes": "Hinge torque & shell verified under standard pressure tests."
+        },
+        "portsAndCharging": {
+          "status": "Pass",
+          "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+        },
+        "camerasAndSensors": {
+          "status": "Pass",
+          "notes": "Sensor noise ratio & microphone input verified."
+        },
+        "audioAndMics": {
+          "status": "Pass",
+          "notes": "Stereo drivers tested with sweep frequency."
+        },
+        "connectivityWifiBt": {
+          "status": "Pass",
+          "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+        }
+      },
+      "partsReplaced": [],
+      "carbonOffsetKg": 52.4,
+      "eWastePreventedGrams": 1650,
+      "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+      "inspectionDate": "2026-10-24T15:57:26.096Z",
+      "createdAt": "2026-10-24T15:57:26.097Z",
+      "updatedAt": "2026-10-24T15:57:26.097Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b6f",
+      "productId": "6adcd5662597cf60eea39b6d",
+      "deviceSerialNumber": "RLP-4YPVIZ-2026",
+      "inspectorName": "RELOOP Certified Lab",
+      "diagnosticSummaryScore": 94,
+      "subsystemChecks": {
+        "screen": {
+          "status": "Minor Blemish",
+          "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+        },
+        "battery": {
+          "status": "Pass",
+          "healthPercent": 91,
+          "cycleCount": 110
+        },
+        "chassis": {
+          "status": "Micro-scratches",
+          "notes": "Hinge torque & shell verified under standard pressure tests."
+        },
+        "portsAndCharging": {
+          "status": "Pass",
+          "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+        },
+        "camerasAndSensors": {
+          "status": "Pass",
+          "notes": "Sensor noise ratio & microphone input verified."
+        },
+        "audioAndMics": {
+          "status": "Pass",
+          "notes": "Stereo drivers tested with sweep frequency."
+        },
+        "connectivityWifiBt": {
+          "status": "Pass",
+          "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+        }
+      },
+      "partsReplaced": [],
+      "carbonOffsetKg": 52.4,
+      "eWastePreventedGrams": 1650,
+      "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+      "inspectionDate": "2026-10-24T15:57:26.103Z",
+      "createdAt": "2026-10-24T15:57:26.103Z",
+      "updatedAt": "2026-10-24T15:57:26.103Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b74",
+      "productId": "6adcd5662597cf60eea39b72",
+      "deviceSerialNumber": "RLP-EGODK9-2026",
+      "inspectorName": "RELOOP Certified Lab",
+      "diagnosticSummaryScore": 94,
+      "subsystemChecks": {
+        "screen": {
+          "status": "Minor Blemish",
+          "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+        },
+        "battery": {
+          "status": "Pass",
+          "healthPercent": 93,
+          "cycleCount": 110
+        },
+        "chassis": {
+          "status": "Micro-scratches",
+          "notes": "Hinge torque & shell verified under standard pressure tests."
+        },
+        "portsAndCharging": {
+          "status": "Pass",
+          "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+        },
+        "camerasAndSensors": {
+          "status": "Pass",
+          "notes": "Sensor noise ratio & microphone input verified."
+        },
+        "audioAndMics": {
+          "status": "Pass",
+          "notes": "Stereo drivers tested with sweep frequency."
+        },
+        "connectivityWifiBt": {
+          "status": "Pass",
+          "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+        }
+      },
+      "partsReplaced": [],
+      "carbonOffsetKg": 52.4,
+      "eWastePreventedGrams": 1650,
+      "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+      "inspectionDate": "2026-10-24T15:57:26.108Z",
+      "createdAt": "2026-10-24T15:57:26.109Z",
+      "updatedAt": "2026-10-24T15:57:26.109Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b79",
+      "productId": "6adcd5662597cf60eea39b77",
+      "deviceSerialNumber": "RLP-I41FUY-2026",
+      "inspectorName": "RELOOP Certified Lab",
+      "diagnosticSummaryScore": 88,
+      "subsystemChecks": {
+        "screen": {
+          "status": "Minor Blemish",
+          "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+        },
+        "battery": {
+          "status": "Pass",
+          "healthPercent": 95,
+          "cycleCount": 110
+        },
+        "chassis": {
+          "status": "Micro-scratches",
+          "notes": "Hinge torque & shell verified under standard pressure tests."
+        },
+        "portsAndCharging": {
+          "status": "Pass",
+          "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+        },
+        "camerasAndSensors": {
+          "status": "Pass",
+          "notes": "Sensor noise ratio & microphone input verified."
+        },
+        "audioAndMics": {
+          "status": "Pass",
+          "notes": "Stereo drivers tested with sweep frequency."
+        },
+        "connectivityWifiBt": {
+          "status": "Pass",
+          "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+        }
+      },
+      "partsReplaced": [],
+      "carbonOffsetKg": 52.4,
+      "eWastePreventedGrams": 1650,
+      "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+      "inspectionDate": "2026-10-24T15:57:26.113Z",
+      "createdAt": "2026-10-24T15:57:26.114Z",
+      "updatedAt": "2026-10-24T15:57:26.114Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b7e",
+      "productId": "6adcd5662597cf60eea39b7c",
+      "deviceSerialNumber": "RLP-XVO2FW-2026",
+      "inspectorName": "RELOOP Certified Lab",
+      "diagnosticSummaryScore": 98,
+      "subsystemChecks": {
+        "screen": {
+          "status": "Pass",
+          "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+        },
+        "battery": {
+          "status": "Pass",
+          "healthPercent": 95,
+          "cycleCount": 110
+        },
+        "chassis": {
+          "status": "Flawless",
+          "notes": "Hinge torque & shell verified under standard pressure tests."
+        },
+        "portsAndCharging": {
+          "status": "Pass",
+          "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+        },
+        "camerasAndSensors": {
+          "status": "Pass",
+          "notes": "Sensor noise ratio & microphone input verified."
+        },
+        "audioAndMics": {
+          "status": "Pass",
+          "notes": "Stereo drivers tested with sweep frequency."
+        },
+        "connectivityWifiBt": {
+          "status": "Pass",
+          "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+        }
+      },
+      "partsReplaced": [
+        {
+          "partName": "OEM Certified Battery Pack",
+          "replacementType": "OEM Original",
+          "date": "2026-10-15T00:00:00.000Z",
+          "_id": "6adcd5662597cf60eea39b7f"
+        }
+      ],
+      "carbonOffsetKg": 52.4,
+      "eWastePreventedGrams": 1650,
+      "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+      "inspectionDate": "2026-10-24T15:57:26.120Z",
+      "createdAt": "2026-10-24T15:57:26.121Z",
+      "updatedAt": "2026-10-24T15:57:26.121Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b84",
+      "productId": "6adcd5662597cf60eea39b82",
+      "deviceSerialNumber": "RLP-0VDXKK-2026",
+      "inspectorName": "RELOOP Certified Lab",
+      "diagnosticSummaryScore": 94,
+      "subsystemChecks": {
+        "screen": {
+          "status": "Minor Blemish",
+          "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+        },
+        "battery": {
+          "status": "Pass",
+          "healthPercent": 90,
+          "cycleCount": 110
+        },
+        "chassis": {
+          "status": "Micro-scratches",
+          "notes": "Hinge torque & shell verified under standard pressure tests."
+        },
+        "portsAndCharging": {
+          "status": "Pass",
+          "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+        },
+        "camerasAndSensors": {
+          "status": "Pass",
+          "notes": "Sensor noise ratio & microphone input verified."
+        },
+        "audioAndMics": {
+          "status": "Pass",
+          "notes": "Stereo drivers tested with sweep frequency."
+        },
+        "connectivityWifiBt": {
+          "status": "Pass",
+          "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+        }
+      },
+      "partsReplaced": [],
+      "carbonOffsetKg": 52.4,
+      "eWastePreventedGrams": 1650,
+      "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+      "inspectionDate": "2026-10-24T15:57:26.125Z",
+      "createdAt": "2026-10-24T15:57:26.126Z",
+      "updatedAt": "2026-10-24T15:57:26.126Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b89",
+      "productId": "6adcd5662597cf60eea39b87",
+      "deviceSerialNumber": "RLP-Q986BP-2026",
+      "inspectorName": "RELOOP Certified Lab",
+      "diagnosticSummaryScore": 94,
+      "subsystemChecks": {
+        "screen": {
+          "status": "Minor Blemish",
+          "notes": "Zero dead pixels detected. Contrast & backlight calibrated."
+        },
+        "battery": {
+          "status": "Pass",
+          "healthPercent": 100,
+          "cycleCount": 110
+        },
+        "chassis": {
+          "status": "Micro-scratches",
+          "notes": "Hinge torque & shell verified under standard pressure tests."
+        },
+        "portsAndCharging": {
+          "status": "Pass",
+          "notes": "Power delivery (PD) and USB 3.2 data throughput verified."
+        },
+        "camerasAndSensors": {
+          "status": "Pass",
+          "notes": "Sensor noise ratio & microphone input verified."
+        },
+        "audioAndMics": {
+          "status": "Pass",
+          "notes": "Stereo drivers tested with sweep frequency."
+        },
+        "connectivityWifiBt": {
+          "status": "Pass",
+          "notes": "Dual-band 5GHz and Bluetooth 5.2 certified."
+        }
+      },
+      "partsReplaced": [],
+      "carbonOffsetKg": 52.4,
+      "eWastePreventedGrams": 1650,
+      "verificationDisclaimer": "All diagnostics performed under RELOOP Standard Lab Protocol 4.2. Diagnostic records are verified prior to sale.",
+      "inspectionDate": "2026-10-24T15:57:26.130Z",
+      "createdAt": "2026-10-24T15:57:26.130Z",
+      "updatedAt": "2026-10-24T15:57:26.130Z",
+      "__v": 0
+    }
+  ],
+  "users": [
+    {
+      "_id": "6adcd5662597cf60eea39b56",
+      "name": "Admin User",
+      "email": "admin@reloop.com",
+      "password": "$2b$10$5WpcLMC3KXlTM/6Zw5Y7uu/3XocXBIcW.JJZNgLwBCZyGFhK99gu2",
+      "role": "admin",
+      "phone": "+91 98765 00001",
+      "shippingAddress": {
+        "street": "RELOOP Operations Hub, Electronics City",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "postalCode": "560100",
+        "country": "India"
+      },
+      "wishlist": [],
+      "createdAt": "2026-10-24T15:57:26.062Z",
+      "updatedAt": "2026-10-24T15:57:26.062Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b58",
+      "name": "Kingston Shasanth",
+      "email": "customer@reloop.com",
+      "password": "$2b$10$/j.FXVOc9Qf9jooAx/VKK.YR6rE8B2Z4o6WmaJJT.7jpOPsVvr6Si",
+      "role": "customer",
+      "phone": "+91 98765 43210",
+      "shippingAddress": {
+        "street": "12, Green Park, Hosur",
+        "city": "Hosur",
+        "state": "Tamil Nadu",
+        "postalCode": "635109",
+        "country": "India"
+      },
+      "wishlist": [],
+      "createdAt": "2026-10-24T15:57:26.067Z",
+      "updatedAt": "2026-10-24T15:57:26.067Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b5a",
+      "name": "Shashanth K.",
+      "email": "shasanth@example.com",
+      "password": "$2b$10$/j.FXVOc9Qf9jooAx/VKK.YR6rE8B2Z4o6WmaJJT.7jpOPsVvr6Si",
+      "role": "customer",
+      "phone": "+91 98450 12345",
+      "shippingAddress": {
+        "street": "University Residence, Peelamedu",
+        "city": "Coimbatore",
+        "state": "Tamil Nadu",
+        "postalCode": "641004",
+        "country": "India"
+      },
+      "wishlist": [],
+      "createdAt": "2026-10-24T15:57:26.070Z",
+      "updatedAt": "2026-10-24T15:57:26.070Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcda894d6ad8cb657f7d36",
+      "name": "Audit Customer",
+      "email": "audit_tester_1792858760725@example.com",
+      "password": "$2b$10$HpgIGXhKt7lMUSqH9.MIH.45BIYPayn14p6D3apI67nt..YF8r16a",
+      "role": "customer",
+      "phone": "9876543210",
+      "shippingAddress": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "postalCode": "",
+        "country": "India"
+      },
+      "wishlist": [],
+      "createdAt": "2026-10-24T16:19:21.087Z",
+      "updatedAt": "2026-10-24T16:19:21.087Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcdb64a12540e5cead95f7",
+      "name": "Audit Customer",
+      "email": "audit_tester_1792858980462@example.com",
+      "password": "$2b$10$4gaksNhBQ5l2YyYF2Pk8t./ZwgLNOq.MbFCn2tGJp4B5f4GfWAAJu",
+      "role": "customer",
+      "phone": "9876543210",
+      "shippingAddress": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "postalCode": "",
+        "country": "India"
+      },
+      "wishlist": [],
+      "createdAt": "2026-10-24T16:23:00.610Z",
+      "updatedAt": "2026-10-24T16:23:00.610Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcdba499a6c1ec18e7e076",
+      "name": "Audit Customer",
+      "email": "audit_tester_1792859044027@example.com",
+      "password": "$2b$10$hrBCxiYOFTcfCMO5N4jukuEar7Yxbj1iyR2JfRHD00LahjcgCMYOi",
+      "role": "customer",
+      "phone": "9876543210",
+      "shippingAddress": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "postalCode": "",
+        "country": "India"
+      },
+      "wishlist": [],
+      "createdAt": "2026-10-24T16:24:04.161Z",
+      "updatedAt": "2026-10-24T16:24:04.161Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcdbd80dc7f29b39b68ad6",
+      "name": "Audit Customer",
+      "email": "audit_tester_1792859096272@example.com",
+      "password": "$2b$10$z4MHXc8HTwSioGkxtgYJ4.2OkaOdCvjADlJnai9kfQampDGilzJSa",
+      "role": "customer",
+      "phone": "9876543210",
+      "shippingAddress": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "postalCode": "",
+        "country": "India"
+      },
+      "wishlist": [],
+      "createdAt": "2026-10-24T16:24:56.414Z",
+      "updatedAt": "2026-10-24T16:24:56.414Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcdbea91c3f14a607472cf",
+      "name": "Audit Customer",
+      "email": "audit_tester_1792859114795@example.com",
+      "password": "$2b$10$3qt6FOICYCgA48TUm87K/eh1ZuSArluccbyOTSk0Gm.zvfEcuMO5y",
+      "role": "customer",
+      "phone": "9876543210",
+      "shippingAddress": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "postalCode": "",
+        "country": "India"
+      },
+      "wishlist": [],
+      "createdAt": "2026-10-24T16:25:14.961Z",
+      "updatedAt": "2026-10-24T16:25:14.961Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcdc0e4a267f9ddd0986fd",
+      "name": "Audit Customer",
+      "email": "audit_tester_1792859150820@example.com",
+      "password": "$2b$10$l1IIIwRSetMFYRsuBg/jsOKrviWsOTfDjs.TPwYuJfIYUXoBMr6Q6",
+      "role": "customer",
+      "phone": "9876543210",
+      "shippingAddress": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "postalCode": "",
+        "country": "India"
+      },
+      "wishlist": [],
+      "createdAt": "2026-10-24T16:25:50.970Z",
+      "updatedAt": "2026-10-24T16:25:50.970Z",
+      "__v": 0
+    }
+  ],
+  "orders": [
+    {
+      "_id": "6adcd5662597cf60eea39b8f",
+      "orderNumber": "RLP-2026-102401",
+      "user": "6adcd5662597cf60eea39b58",
+      "orderItems": [
+        {
+          "product": "6adcd5662597cf60eea39b6d",
+          "title": "Apple iPhone 13 (128GB Midnight)",
+          "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=80",
+          "conditionGrade": "Excellent",
+          "unitPrice": 29999,
+          "quantity": 1,
+          "subtotal": 29999,
+          "_id": "6adcd5662597cf60eea39b90"
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Kingston Shasanth",
+        "phone": "+91 98765 43210",
+        "street": "12, Green Park, Hosur",
+        "city": "Hosur",
+        "state": "Tamil Nadu",
+        "postalCode": "635109",
+        "country": "India"
+      },
+      "pricing": {
+        "itemsSubtotal": 29999,
+        "shippingFee": 0,
+        "estimatedTax": 5400,
+        "discountAmount": 0,
+        "totalPrice": 29999
+      },
+      "paymentDetails": {
+        "paymentMethod": "Simulated Card",
+        "status": "Paid",
+        "transactionId": "TXN-SIM-948102",
+        "cardBrand": "Visa",
+        "cardLast4": "4242",
+        "paidAt": "2026-10-24T15:57:26.140Z"
+      },
+      "orderStatus": "Delivered",
+      "statusTimeline": [
+        {
+          "status": "Order Placed",
+          "timestamp": "2026-10-20T00:00:00.000Z",
+          "note": "Order confirmed",
+          "_id": "6adcd5662597cf60eea39b91"
+        },
+        {
+          "status": "Inspected & Packed",
+          "timestamp": "2026-10-21T00:00:00.000Z",
+          "note": "Quality seal applied",
+          "_id": "6adcd5662597cf60eea39b92"
+        },
+        {
+          "status": "Dispatched",
+          "timestamp": "2026-10-22T00:00:00.000Z",
+          "note": "Shipped via Express Express",
+          "_id": "6adcd5662597cf60eea39b93"
+        },
+        {
+          "status": "Delivered",
+          "timestamp": "2026-10-24T00:00:00.000Z",
+          "note": "Delivered to customer",
+          "_id": "6adcd5662597cf60eea39b94"
+        }
+      ],
+      "createdAt": "2026-10-24T15:57:26.141Z",
+      "updatedAt": "2026-10-24T15:57:26.141Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b96",
+      "orderNumber": "RLP-2026-102301",
+      "user": "6adcd5662597cf60eea39b58",
+      "orderItems": [
+        {
+          "product": "6adcd5662597cf60eea39b5c",
+          "title": "Apple MacBook Air M1 (2020)",
+          "image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&auto=format&fit=crop&q=80",
+          "conditionGrade": "Pristine",
+          "unitPrice": 45999,
+          "quantity": 1,
+          "subtotal": 45999,
+          "_id": "6adcd5662597cf60eea39b97"
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Kingston Shasanth",
+        "phone": "+91 98765 43210",
+        "street": "12, Green Park, Hosur",
+        "city": "Hosur",
+        "state": "Tamil Nadu",
+        "postalCode": "635109",
+        "country": "India"
+      },
+      "pricing": {
+        "itemsSubtotal": 45999,
+        "shippingFee": 0,
+        "estimatedTax": 8280,
+        "discountAmount": 0,
+        "totalPrice": 45999
+      },
+      "paymentDetails": {
+        "paymentMethod": "Simulated Card",
+        "status": "Paid",
+        "transactionId": "TXN-SIM-820194",
+        "cardBrand": "Mastercard",
+        "cardLast4": "8888",
+        "paidAt": "2026-10-24T15:57:26.144Z"
+      },
+      "orderStatus": "Inspected & Packed",
+      "statusTimeline": [
+        {
+          "status": "Order Placed",
+          "timestamp": "2026-10-23T00:00:00.000Z",
+          "note": "Order confirmed",
+          "_id": "6adcd5662597cf60eea39b98"
+        },
+        {
+          "status": "Inspected & Packed",
+          "timestamp": "2026-10-24T00:00:00.000Z",
+          "note": "50-point diagnostic certified",
+          "_id": "6adcd5662597cf60eea39b99"
+        }
+      ],
+      "createdAt": "2026-10-24T15:57:26.145Z",
+      "updatedAt": "2026-10-24T15:57:26.145Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcd5662597cf60eea39b9b",
+      "orderNumber": "RLP-2026-102201",
+      "user": "6adcd5662597cf60eea39b5a",
+      "orderItems": [
+        {
+          "product": "6adcd5662597cf60eea39b77",
+          "title": "Sony WH-1000XM4 Noise Cancelling",
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80",
+          "conditionGrade": "Good",
+          "unitPrice": 14999,
+          "quantity": 1,
+          "subtotal": 14999,
+          "_id": "6adcd5662597cf60eea39b9c"
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Shashanth K.",
+        "phone": "+91 98450 12345",
+        "street": "University Residence, Peelamedu",
+        "city": "Coimbatore",
+        "state": "Tamil Nadu",
+        "postalCode": "641004",
+        "country": "India"
+      },
+      "pricing": {
+        "itemsSubtotal": 14999,
+        "shippingFee": 0,
+        "estimatedTax": 2700,
+        "discountAmount": 0,
+        "totalPrice": 14999
+      },
+      "paymentDetails": {
+        "paymentMethod": "Simulated Card",
+        "status": "Paid",
+        "transactionId": "TXN-SIM-719301",
+        "cardBrand": "Visa",
+        "cardLast4": "1234",
+        "paidAt": "2026-10-24T15:57:26.146Z"
+      },
+      "orderStatus": "Dispatched",
+      "statusTimeline": [
+        {
+          "status": "Order Placed",
+          "timestamp": "2026-10-22T00:00:00.000Z",
+          "note": "Order placed",
+          "_id": "6adcd5662597cf60eea39b9d"
+        },
+        {
+          "status": "Dispatched",
+          "timestamp": "2026-10-23T00:00:00.000Z",
+          "note": "Courier tracking assigned",
+          "_id": "6adcd5662597cf60eea39b9e"
+        }
+      ],
+      "createdAt": "2026-10-24T15:57:26.147Z",
+      "updatedAt": "2026-10-24T15:57:26.147Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcdb64a12540e5cead9615",
+      "orderNumber": "RLP-2026-72386",
+      "user": "6adcdb64a12540e5cead95f7",
+      "orderItems": [
+        {
+          "product": "6adcd5662597cf60eea39b87",
+          "title": "NVIDIA GeForce RTX 3070 Ti (8GB GDDR6X)",
+          "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&auto=format&fit=crop&q=80",
+          "conditionGrade": "Excellent",
+          "unitPrice": 28999,
+          "quantity": 1,
+          "subtotal": 28999,
+          "_id": "6adcdb64a12540e5cead9616"
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Audit Customer",
+        "phone": "9876543210",
+        "street": "123 Test Tech Park",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "postalCode": "600001",
+        "country": "India"
+      },
+      "pricing": {
+        "itemsSubtotal": 28999,
+        "shippingFee": 0,
+        "estimatedTax": 5220,
+        "discountAmount": 0,
+        "totalPrice": 28999
+      },
+      "paymentDetails": {
+        "paymentMethod": "Simulated Card",
+        "status": "Paid",
+        "transactionId": "TXN-SIM-MVMLY387",
+        "cardBrand": "Visa",
+        "cardLast4": "4242",
+        "paidAt": "2026-10-24T16:23:00.823Z"
+      },
+      "orderStatus": "Order Placed",
+      "statusTimeline": [
+        {
+          "status": "Order Placed",
+          "timestamp": "2026-10-24T16:23:00.823Z",
+          "note": "Payment verified via RELOOP Simulated Payment Sandbox.",
+          "_id": "6adcdb64a12540e5cead9617"
+        }
+      ],
+      "createdAt": "2026-10-24T16:23:00.825Z",
+      "updatedAt": "2026-10-24T16:23:00.825Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcdba499a6c1ec18e7e093",
+      "orderNumber": "RLP-2026-35287",
+      "user": "6adcdba499a6c1ec18e7e076",
+      "orderItems": [
+        {
+          "product": "6adcd5662597cf60eea39b87",
+          "title": "NVIDIA GeForce RTX 3070 Ti (8GB GDDR6X)",
+          "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800&auto=format&fit=crop&q=80",
+          "conditionGrade": "Excellent",
+          "unitPrice": 28999,
+          "quantity": 1,
+          "subtotal": 28999,
+          "_id": "6adcdba499a6c1ec18e7e094"
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Audit Customer",
+        "phone": "9876543210",
+        "street": "123 Test Tech Park",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "postalCode": "600001",
+        "country": "India"
+      },
+      "pricing": {
+        "itemsSubtotal": 28999,
+        "shippingFee": 0,
+        "estimatedTax": 5220,
+        "discountAmount": 0,
+        "totalPrice": 28999
+      },
+      "paymentDetails": {
+        "paymentMethod": "Simulated Card",
+        "status": "Paid",
+        "transactionId": "TXN-SIM-MVMLZG8J",
+        "cardBrand": "Visa",
+        "cardLast4": "4242",
+        "paidAt": "2026-10-24T16:24:04.339Z"
+      },
+      "orderStatus": "Dispatched",
+      "statusTimeline": [
+        {
+          "status": "Order Placed",
+          "timestamp": "2026-10-24T16:24:04.339Z",
+          "note": "Payment verified via RELOOP Simulated Payment Sandbox.",
+          "_id": "6adcdba499a6c1ec18e7e095"
+        },
+        {
+          "status": "Dispatched",
+          "timestamp": "2026-10-24T16:24:04.477Z",
+          "note": "Order updated to Dispatched",
+          "_id": "6adcdba499a6c1ec18e7e0ce"
+        }
+      ],
+      "createdAt": "2026-10-24T16:24:04.342Z",
+      "updatedAt": "2026-10-24T16:24:04.479Z",
+      "__v": 1
+    },
+    {
+      "_id": "6adcdbd80dc7f29b39b68af3",
+      "orderNumber": "RLP-2026-77626",
+      "user": "6adcdbd80dc7f29b39b68ad6",
+      "orderItems": [
+        {
+          "product": "6adcd5662597cf60eea39b82",
+          "title": "Lenovo ThinkPad T14 Gen 2 (i5 / 16GB)",
+          "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80",
+          "conditionGrade": "Excellent",
+          "unitPrice": 36500,
+          "quantity": 1,
+          "subtotal": 36500,
+          "_id": "6adcdbd80dc7f29b39b68af4"
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Audit Customer",
+        "phone": "9876543210",
+        "street": "123 Test Tech Park",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "postalCode": "600001",
+        "country": "India"
+      },
+      "pricing": {
+        "itemsSubtotal": 36500,
+        "shippingFee": 0,
+        "estimatedTax": 6570,
+        "discountAmount": 0,
+        "totalPrice": 36500
+      },
+      "paymentDetails": {
+        "paymentMethod": "Simulated Card",
+        "status": "Paid",
+        "transactionId": "TXN-SIM-MVMM0KKK",
+        "cardBrand": "Visa",
+        "cardLast4": "4242",
+        "paidAt": "2026-10-24T16:24:56.612Z"
+      },
+      "orderStatus": "Dispatched",
+      "statusTimeline": [
+        {
+          "status": "Order Placed",
+          "timestamp": "2026-10-24T16:24:56.612Z",
+          "note": "Payment verified via RELOOP Simulated Payment Sandbox.",
+          "_id": "6adcdbd80dc7f29b39b68af5"
+        },
+        {
+          "status": "Dispatched",
+          "timestamp": "2026-10-24T16:24:56.764Z",
+          "note": "Order updated to Dispatched",
+          "_id": "6adcdbd80dc7f29b39b68b2c"
+        }
+      ],
+      "createdAt": "2026-10-24T16:24:56.616Z",
+      "updatedAt": "2026-10-24T16:24:56.766Z",
+      "__v": 1
+    },
+    {
+      "_id": "6adcdbeb91c3f14a607472ea",
+      "orderNumber": "RLP-2026-33969",
+      "user": "6adcdbea91c3f14a607472cf",
+      "orderItems": [
+        {
+          "product": "6adcd5662597cf60eea39b82",
+          "title": "Lenovo ThinkPad T14 Gen 2 (i5 / 16GB)",
+          "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80",
+          "conditionGrade": "Excellent",
+          "unitPrice": 36500,
+          "quantity": 1,
+          "subtotal": 36500,
+          "_id": "6adcdbeb91c3f14a607472eb"
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Audit Customer",
+        "phone": "9876543210",
+        "street": "123 Test Tech Park",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "postalCode": "600001",
+        "country": "India"
+      },
+      "pricing": {
+        "itemsSubtotal": 36500,
+        "shippingFee": 0,
+        "estimatedTax": 6570,
+        "discountAmount": 0,
+        "totalPrice": 36500
+      },
+      "paymentDetails": {
+        "paymentMethod": "Simulated Card",
+        "status": "Paid",
+        "transactionId": "TXN-SIM-MVMM0YWL",
+        "cardBrand": "Visa",
+        "cardLast4": "4242",
+        "paidAt": "2026-10-24T16:25:15.189Z"
+      },
+      "orderStatus": "Dispatched",
+      "statusTimeline": [
+        {
+          "status": "Order Placed",
+          "timestamp": "2026-10-24T16:25:15.189Z",
+          "note": "Payment verified via RELOOP Simulated Payment Sandbox.",
+          "_id": "6adcdbeb91c3f14a607472ec"
+        },
+        {
+          "status": "Dispatched",
+          "timestamp": "2026-10-24T16:25:15.388Z",
+          "note": "Order updated to Dispatched",
+          "_id": "6adcdbeb91c3f14a60747323"
+        }
+      ],
+      "createdAt": "2026-10-24T16:25:15.192Z",
+      "updatedAt": "2026-10-24T16:25:15.389Z",
+      "__v": 1
+    },
+    {
+      "_id": "6adcdc0f4a267f9ddd098719",
+      "orderNumber": "RLP-2026-65196",
+      "user": "6adcdc0e4a267f9ddd0986fd",
+      "orderItems": [
+        {
+          "product": "6adcd5662597cf60eea39b82",
+          "title": "Lenovo ThinkPad T14 Gen 2 (i5 / 16GB)",
+          "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80",
+          "conditionGrade": "Excellent",
+          "unitPrice": 36500,
+          "quantity": 1,
+          "subtotal": 36500,
+          "_id": "6adcdc0f4a267f9ddd09871a"
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Audit Customer",
+        "phone": "9876543210",
+        "street": "123 Test Tech Park",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "postalCode": "600001",
+        "country": "India"
+      },
+      "pricing": {
+        "itemsSubtotal": 36500,
+        "shippingFee": 0,
+        "estimatedTax": 6570,
+        "discountAmount": 0,
+        "totalPrice": 36500
+      },
+      "paymentDetails": {
+        "paymentMethod": "Simulated Card",
+        "status": "Paid",
+        "transactionId": "TXN-SIM-MVMM1QNH",
+        "cardBrand": "Visa",
+        "cardLast4": "4242",
+        "paidAt": "2026-10-24T16:25:51.149Z"
+      },
+      "orderStatus": "Dispatched",
+      "statusTimeline": [
+        {
+          "status": "Order Placed",
+          "timestamp": "2026-10-24T16:25:51.149Z",
+          "note": "Payment verified via RELOOP Simulated Payment Sandbox.",
+          "_id": "6adcdc0f4a267f9ddd09871b"
+        },
+        {
+          "status": "Dispatched",
+          "timestamp": "2026-10-24T16:25:51.313Z",
+          "note": "Order updated to Dispatched",
+          "_id": "6adcdc0f4a267f9ddd098752"
+        }
+      ],
+      "createdAt": "2026-10-24T16:25:51.152Z",
+      "updatedAt": "2026-10-24T16:25:51.315Z",
+      "__v": 1
+    }
+  ],
+  "tradeinrequests": [
+    {
+      "_id": "6adcd5662597cf60eea39ba0",
+      "user": "6adcd5662597cf60eea39b58",
+      "deviceCategory": "Smartphones",
+      "brand": "Apple",
+      "modelName": "iPhone 12 (64GB)",
+      "specifications": "Black, Battery 84%",
+      "functionalState": {
+        "powersOn": true,
+        "screenIntact": true,
+        "touchResponsive": true,
+        "camerasWork": true,
+        "batteryWorking": true
+      },
+      "cosmeticGrade": "Good (Minor Scratches)",
+      "estimatedValue": 14500,
+      "valuationBreakdown": {
+        "baseModelValue": 16000,
+        "functionalDeductions": 0,
+        "cosmeticMultiplier": 1
+      },
+      "status": "Submitted",
+      "voucherCode": "",
+      "inspectorNotes": "",
+      "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+      "createdAt": "2026-10-24T15:57:26.150Z",
+      "updatedAt": "2026-10-24T15:57:26.150Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcdbeb91c3f14a607472e5",
+      "user": "6adcdbea91c3f14a607472cf",
+      "deviceCategory": "Smartphones",
+      "brand": "Apple",
+      "modelName": "iPhone 13 128GB",
+      "specifications": "Battery: 85-90%, Screen: Intact, Casing: Good",
+      "functionalState": {
+        "powersOn": true,
+        "screenIntact": true,
+        "touchResponsive": true,
+        "camerasWork": true,
+        "batteryWorking": true
+      },
+      "cosmeticGrade": "Good (Minor Scratches)",
+      "estimatedValue": 18000,
+      "valuationBreakdown": {
+        "baseModelValue": 20000,
+        "functionalDeductions": 0,
+        "cosmeticMultiplier": 1
+      },
+      "status": "Submitted",
+      "voucherCode": "",
+      "inspectorNotes": "",
+      "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+      "createdAt": "2026-10-24T16:25:15.175Z",
+      "updatedAt": "2026-10-24T16:25:15.175Z",
+      "__v": 0
+    },
+    {
+      "_id": "6adcdc0f4a267f9ddd098714",
+      "user": "6adcdc0e4a267f9ddd0986fd",
+      "deviceCategory": "Smartphones",
+      "brand": "Apple",
+      "modelName": "iPhone 13 128GB",
+      "specifications": "Battery: 85-90%, Screen: Intact, Casing: Good",
+      "functionalState": {
+        "powersOn": true,
+        "screenIntact": true,
+        "touchResponsive": true,
+        "camerasWork": true,
+        "batteryWorking": true
+      },
+      "cosmeticGrade": "Good (Minor Scratches)",
+      "estimatedValue": 18000,
+      "valuationBreakdown": {
+        "baseModelValue": 20000,
+        "functionalDeductions": 0,
+        "cosmeticMultiplier": 1
+      },
+      "status": "Submitted",
+      "voucherCode": "",
+      "inspectorNotes": "",
+      "verificationDisclosure": "Submitted diagnostics are provisional estimates. Final voucher requires physical verification at RELOOP testing center.",
+      "createdAt": "2026-10-24T16:25:51.136Z",
+      "updatedAt": "2026-10-24T16:25:51.136Z",
+      "__v": 0
+    }
+  ]
+}
