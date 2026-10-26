@@ -1,4 +1,6 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
+import api from '../services/api';
+import { subscribeToSync } from '../services/syncChannel';
 
 const CartContext = createContext();
 
@@ -12,8 +14,10 @@ export function CartProvider({ children }) {
     }
   });
 
+  const [reconciliationNotices, setReconciliationNotices] = useState([]);
   const [promoCode, setPromoCode] = useState('');
   const [discountAmount, setDiscountAmount] = useState(0);
+  const isReconcilingRef = useRef(false);
 
   useEffect(() => {
     try {
@@ -22,6 +26,111 @@ export function CartProvider({ children }) {
       console.error('Failed to persist cart:', e);
     }
   }, [cartItems]);
+
+  const reconcileCartWithServer = useCallback(async () => {
+    if (isReconcilingRef.current) return;
+    try {
+      const saved = localStorage.getItem('reloop_cart');
+      const itemsToReconcile = saved ? JSON.parse(saved) : [];
+      if (!itemsToReconcile || itemsToReconcile.length === 0) return;
+
+      isReconcilingRef.current = true;
+      const updatedItems = [];
+      const newNotices = [];
+
+      for (const item of itemsToReconcile) {
+        if (!item?.product?._id) continue;
+        try {
+          const res = await api.get(`/products/${item.product._id}`);
+          if (res.data?.success && res.data.product) {
+            const serverProd = res.data.product;
+
+            // Price change detection
+            if (serverProd.refurbishedPrice !== item.product.refurbishedPrice) {
+              newNotices.push(
+                `Price for "${serverProd.title}" updated from ₹${item.product.refurbishedPrice?.toLocaleString('en-IN')} to ₹${serverProd.refurbishedPrice?.toLocaleString('en-IN')}.`
+              );
+            }
+
+            // Stock availability check
+            let validQty = item.quantity;
+            if (serverProd.stockCount <= 0) {
+              newNotices.push(`"${serverProd.title}" is currently out of stock.`);
+              validQty = 0;
+            } else if (item.quantity > serverProd.stockCount) {
+              newNotices.push(
+                `Quantity for "${serverProd.title}" adjusted to maximum available stock (${serverProd.stockCount}).`
+              );
+              validQty = serverProd.stockCount;
+            }
+
+            updatedItems.push({
+              product: {
+                ...item.product,
+                ...serverProd,
+              },
+              quantity: validQty,
+            });
+          } else {
+            updatedItems.push(item);
+          }
+        } catch (err) {
+          if (err.response?.status === 404) {
+            newNotices.push(`"${item.product.title || 'An item'}" is no longer available in the catalog.`);
+            updatedItems.push({
+              product: {
+                ...item.product,
+                stockCount: 0,
+                isUnavailable: true,
+              },
+              quantity: 0,
+            });
+          } else {
+            // Keep existing entry on network failure to avoid wiping cart
+            updatedItems.push(item);
+          }
+        }
+      }
+
+      setCartItems(updatedItems);
+      if (newNotices.length > 0) {
+        setReconciliationNotices((prev) => Array.from(new Set([...prev, ...newNotices])));
+      }
+    } catch (e) {
+      console.warn('[Cart Reconcile Error]:', e);
+    } finally {
+      isReconcilingRef.current = false;
+    }
+  }, []);
+
+  // Hydration reconciliation on mount
+  useEffect(() => {
+    reconcileCartWithServer();
+  }, [reconcileCartWithServer]);
+
+  // Sync listener and tab focus revalidation
+  useEffect(() => {
+    const unsubscribe = subscribeToSync((event) => {
+      if (event.entity === 'products') {
+        reconcileCartWithServer();
+      }
+    });
+
+    const handleFocus = () => {
+      if (document.visibilityState === 'visible') {
+        reconcileCartWithServer();
+      }
+    };
+
+    window.addEventListener('visibilitychange', handleFocus);
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      unsubscribe();
+      window.removeEventListener('visibilitychange', handleFocus);
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, [reconcileCartWithServer]);
 
   const addToCart = (product, quantity = 1) => {
     setCartItems((prev) => {
@@ -95,6 +204,14 @@ export function CartProvider({ children }) {
     return { success: false, message: 'Invalid or expired promo code.' };
   };
 
+  const dismissNotice = (index) => {
+    setReconciliationNotices((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const clearNotices = () => {
+    setReconciliationNotices([]);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -108,6 +225,10 @@ export function CartProvider({ children }) {
         grandTotal,
         discountAmount,
         promoCode,
+        reconciliationNotices,
+        dismissNotice,
+        clearNotices,
+        reconcileCartWithServer,
         addToCart,
         updateQuantity,
         removeFromCart,

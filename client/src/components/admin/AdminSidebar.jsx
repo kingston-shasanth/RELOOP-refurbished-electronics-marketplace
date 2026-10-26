@@ -100,7 +100,7 @@ export default function AdminSidebar() {
           type="button"
           className="btn btn-sm btn-outline-danger p-1"
           onClick={() => {
-            logout();
+            logout('admin');
             navigate('/login');
           }}
           title="Sign out"

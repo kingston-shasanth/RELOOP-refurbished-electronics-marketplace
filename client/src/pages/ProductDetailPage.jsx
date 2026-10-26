@@ -22,6 +22,7 @@ import { useWishlist } from '../context/WishlistContext';
 import { useCompare } from '../context/CompareContext';
 import { useToast } from '../context/ToastContext';
 import api from '../services/api';
+import { subscribeToSync } from '../services/syncChannel';
 
 export default function ProductDetailPage() {
   const { id } = useParams();
@@ -40,22 +41,45 @@ export default function ProductDetailPage() {
   const { addToCompare, isInCompare, removeFromCompare } = useCompare();
   const { showToast } = useToast();
 
+  const fetchProduct = async (silent = false) => {
+    if (!silent) setLoading(true);
+    try {
+      const res = await api.get(`/products/${id}`);
+      if (res.data.success) {
+        setProduct(res.data.product);
+        setSelectedImage((prev) => prev || res.data.product.primaryImage || res.data.product.images?.[0] || '');
+      }
+    } catch (err) {
+      console.error('Error fetching product details:', err);
+    } finally {
+      if (!silent) setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const fetchProduct = async () => {
-      setLoading(true);
-      try {
-        const res = await api.get(`/products/${id}`);
-        if (res.data.success) {
-          setProduct(res.data.product);
-          setSelectedImage(res.data.product.primaryImage || res.data.product.images?.[0] || '');
-        }
-      } catch (err) {
-        console.error('Error fetching product details:', err);
-      } finally {
-        setLoading(false);
+    fetchProduct();
+
+    // Revalidate when product changes occur in other tabs
+    const unsubscribe = subscribeToSync((event) => {
+      if (event.entity === 'products' || event.entity === 'passport') {
+        fetchProduct(true);
+      }
+    });
+
+    const handleFocus = () => {
+      if (document.visibilityState === 'visible') {
+        fetchProduct(true);
       }
     };
-    fetchProduct();
+
+    window.addEventListener('visibilitychange', handleFocus);
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      unsubscribe();
+      window.removeEventListener('visibilitychange', handleFocus);
+      window.removeEventListener('focus', handleFocus);
+    };
   }, [id]);
 
   if (loading) {

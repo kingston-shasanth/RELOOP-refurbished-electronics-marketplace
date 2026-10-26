@@ -22,6 +22,7 @@ import ConditionBadge from '../components/common/ConditionBadge';
 import ProductImage from '../components/common/ProductImage';
 import DigitalPassportModal from '../components/passport/DigitalPassportModal';
 import api from '../services/api';
+import { subscribeToSync } from '../services/syncChannel';
 
 export default function AccountPage() {
   const { user, logout } = useAuth();
@@ -34,6 +35,7 @@ export default function AccountPage() {
   const [tradeIns, setTradeIns] = useState([]);
   const [orderFilter, setOrderFilter] = useState('all');
   const [loading, setLoading] = useState(true);
+  const [authError, setAuthError] = useState(null);
   const [selectedProductForPassport, setSelectedProductForPassport] = useState(null);
 
   const queryParams = new URLSearchParams(location.search);
@@ -46,30 +48,60 @@ export default function AccountPage() {
     }
   }, [tabParam]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const [ordersRes, tradeInsRes] = await Promise.all([
-          api.get('/orders/my-orders').catch(() => ({ data: { success: false, orders: [] } })),
-          api.get('/trade-in/my-requests').catch(() => ({ data: { success: false, requests: [] } })),
-        ]);
+  const fetchData = async () => {
+    if (!user) {
+      setLoading(false);
+      return;
+    }
+    setLoading(true);
+    setAuthError(null);
+    try {
+      const [ordersRes, tradeInsRes] = await Promise.all([
+        api.get('/orders/my-orders'),
+        api.get('/trade-in/my-requests'),
+      ]);
 
-        if (ordersRes.data?.success) {
-          setOrders(ordersRes.data.orders);
-        }
-        if (tradeInsRes.data?.success) {
-          setTradeIns(tradeInsRes.data.requests);
-        }
-      } catch (err) {
-        console.error('Error fetching account data:', err);
-      } finally {
-        setLoading(false);
+      if (ordersRes.data?.success) {
+        setOrders(ordersRes.data.orders);
+      }
+      if (tradeInsRes.data?.success) {
+        setTradeIns(tradeInsRes.data.requests);
+      }
+    } catch (err) {
+      console.error('Error fetching account data:', err);
+      if (err.response?.status === 401 || err.response?.status === 403) {
+        setAuthError('Customer session expired or unauthorized. Please sign in to view your orders.');
+      } else {
+        setAuthError(err.response?.data?.message || 'Could not load your records. Please check connectivity.');
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+
+    // Subscribe to cross-tab synchronization events
+    const unsubscribe = subscribeToSync((event) => {
+      if (event.entity === 'orders' || event.entity === 'trade-in') {
+        fetchData();
+      }
+    });
+
+    // Revalidate on tab focus / visibility
+    const handleVisibility = () => {
+      if (document.visibilityState === 'visible') {
+        fetchData();
       }
     };
+    document.addEventListener('visibilitychange', handleVisibility);
 
-    fetchData();
-  }, []);
+    return () => {
+      unsubscribe();
+      document.removeEventListener('visibilitychange', handleVisibility);
+    };
+  }, [user]);
 
   const filteredOrders = orders.filter((order) => {
     if (orderFilter === 'all') return true;
@@ -80,9 +112,48 @@ export default function AccountPage() {
     return true;
   });
 
+  if (!user) {
+    return (
+      <div className="py-5" style={{ minHeight: '60vh', backgroundColor: 'var(--reloop-bg)' }}>
+        <div className="container-xl">
+          <div className="reloop-card p-5 max-w-md mx-auto text-center bg-white shadow-xs" style={{ maxWidth: '480px', margin: '3rem auto' }}>
+            <div className="p-3 rounded-circle bg-light d-inline-flex mb-3 text-success">
+              <ShieldCheck size={36} />
+            </div>
+            <h4 className="fw-bold text-dark mb-2">Customer Sign-In Required</h4>
+            <p className="text-muted small mb-4">
+              Please sign in to view your verified orders, live fulfillment tracking, and trade-in inspection vouchers.
+            </p>
+            <div className="d-flex justify-content-center gap-2">
+              <Link to="/login?redirect=/account" className="btn btn-reloop-primary px-4">
+                Sign In to Account
+              </Link>
+              <Link to="/products" className="btn btn-reloop-outline px-3">
+                Browse Products
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="py-4">
       <div className="container-xl">
+        {/* Authentication Notice if Session Clobbered */}
+        {authError && (
+          <div className="alert alert-warning d-flex align-items-center justify-content-between mb-4 shadow-sm">
+            <div className="d-flex align-items-center gap-2">
+              <AlertCircle size={20} className="text-warning-emphasis" />
+              <span className="small fw-semibold">{authError}</span>
+            </div>
+            <Link to="/login?redirect=/account" className="btn btn-sm btn-dark px-3 py-1">
+              Sign In
+            </Link>
+          </div>
+        )}
+
         {/* Placed Order Celebration Alert */}
         {orderPlacedId && (
           <div className="alert alert-success d-flex align-items-center justify-content-between mb-4 shadow-sm">
@@ -167,7 +238,7 @@ export default function AccountPage() {
                   type="button"
                   className="btn btn-outline-danger text-start d-flex align-items-center gap-2 py-2 px-3"
                   onClick={() => {
-                    logout();
+                    logout('customer');
                     navigate('/login');
                   }}
                 >

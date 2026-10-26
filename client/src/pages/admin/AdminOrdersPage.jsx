@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import AdminLayout from '../../components/admin/AdminLayout';
 import api from '../../services/api';
+import { notifyDataChanged } from '../../services/syncChannel';
 
 export default function AdminOrdersPage() {
   const [orders, setOrders] = useState([]);
@@ -64,6 +65,7 @@ export default function AdminOrdersPage() {
 
       if (res.data.success) {
         setAlertMsg({ type: 'success', text: `Order #${selectedOrder.orderNumber} updated to "${newStatus}"!` });
+        notifyDataChanged('orders', selectedOrder._id);
         setSelectedOrder(null);
         fetchOrders();
       }

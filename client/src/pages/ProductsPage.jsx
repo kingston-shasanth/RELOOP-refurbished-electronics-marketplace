@@ -4,6 +4,7 @@ import { Filter, SlidersHorizontal, X, RotateCcw, ShieldCheck, ChevronRight } fr
 import ProductCard from '../components/product/ProductCard';
 import ProductSkeleton from '../components/common/ProductSkeleton';
 import api from '../services/api';
+import { subscribeToSync } from '../services/syncChannel';
 
 export default function ProductsPage() {
   const location = useLocation();
@@ -50,6 +51,48 @@ export default function ProductsPage() {
       page: pageParam,
       maxPrice,
     });
+  }, [location.search, maxPrice]);
+
+  useEffect(() => {
+    // Revalidate products when admin mutates products in another tab
+    const unsubscribe = subscribeToSync((event) => {
+      if (event.entity === 'products') {
+        const params = new URLSearchParams(location.search);
+        fetchProducts({
+          search: params.get('search') || '',
+          category: params.get('category') || 'All',
+          grade: params.get('grade') || '',
+          brand: params.get('brand') || '',
+          sort: params.get('sort') || 'featured',
+          page: parseInt(params.get('page') || '1', 10),
+          maxPrice,
+        });
+      }
+    });
+
+    const handleFocus = () => {
+      if (document.visibilityState === 'visible') {
+        const params = new URLSearchParams(location.search);
+        fetchProducts({
+          search: params.get('search') || '',
+          category: params.get('category') || 'All',
+          grade: params.get('grade') || '',
+          brand: params.get('brand') || '',
+          sort: params.get('sort') || 'featured',
+          page: parseInt(params.get('page') || '1', 10),
+          maxPrice,
+        });
+      }
+    };
+
+    window.addEventListener('visibilitychange', handleFocus);
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      unsubscribe();
+      window.removeEventListener('visibilitychange', handleFocus);
+      window.removeEventListener('focus', handleFocus);
+    };
   }, [location.search, maxPrice]);
 
   const fetchProducts = async (filters) => {

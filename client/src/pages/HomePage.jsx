@@ -31,25 +31,49 @@ import ProductSkeleton from '../components/common/ProductSkeleton';
 import ProductImage from '../components/common/ProductImage';
 import CampaignCarousel from '../components/home/CampaignCarousel';
 import api from '../services/api';
+import { subscribeToSync } from '../services/syncChannel';
 
 export default function HomePage() {
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const fetchCatalog = async () => {
+    try {
+      const res = await api.get('/products?limit=100');
+      if (res.data.success) {
+        setAllProducts(res.data.products);
+      }
+    } catch (err) {
+      console.error('Failed to load catalogue products:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const fetchCatalog = async () => {
-      try {
-        const res = await api.get('/products?limit=100');
-        if (res.data.success) {
-          setAllProducts(res.data.products);
-        }
-      } catch (err) {
-        console.error('Failed to load catalogue products:', err);
-      } finally {
-        setLoading(false);
+    fetchCatalog();
+
+    // Revalidate when product changes occur in other tabs
+    const unsubscribe = subscribeToSync((event) => {
+      if (event.entity === 'products') {
+        fetchCatalog();
+      }
+    });
+
+    // Revalidate when tab regains focus or visibility
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        fetchCatalog();
       }
     };
-    fetchCatalog();
+    window.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('focus', handleVisibilityChange);
+
+    return () => {
+      unsubscribe();
+      window.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('focus', handleVisibilityChange);
+    };
   }, []);
 
   // Filter distinct product merchandising rows without redundancy
@@ -73,6 +97,12 @@ export default function HomePage() {
 
   return (
     <div className="reloop-homepage">
+      {/* ======================================================================
+          FIRST-SCREEN: PROMINENT HORIZONTAL DEALS CAMPAIGN POSTER CAROUSEL
+          Directly below navigation — 100% visible on initial desktop viewport
+          ====================================================================== */}
+      <CampaignCarousel />
+
       {/* ======================================================================
           1. HERO SECTION: EDITORIAL TYPOGRAPHY & REAL DEVICE PHOTOGRAPHY
           ====================================================================== */}
@@ -229,11 +259,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ======================================================================
-          1.5. PREMIUM HORIZONTAL DEALS CAMPAIGN POSTER CAROUSEL
-          ====================================================================== */}
-      <CampaignCarousel />
 
       {/* ======================================================================
           2. COORDINATED OFFER TILES

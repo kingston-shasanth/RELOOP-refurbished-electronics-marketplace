@@ -10,6 +10,7 @@
     "test:health": "node test/healthCheck.js",
     "test:audit": "node test/complianceAudit.js",
     "test:upload": "node test/uploadAndSyncTest.js",
+    "test:defects": "node test/defectVerificationSuite.js",
     "test:regression": "node test/finalRegressionSuite.js",
     "test:e2e": "node test/masterE2EVerification.js"
   },

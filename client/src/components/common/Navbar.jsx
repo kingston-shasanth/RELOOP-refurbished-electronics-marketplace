@@ -216,7 +216,7 @@ export default function Navbar() {
                           type="button"
                           className="dropdown-item d-flex align-items-center gap-2 text-danger py-2"
                           onClick={() => {
-                            logout();
+                            logout('customer');
                             setShowUserMenu(false);
                             navigate('/');
                           }}

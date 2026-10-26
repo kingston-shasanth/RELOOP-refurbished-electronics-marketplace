@@ -139,7 +139,7 @@ export default function CampaignCarousel() {
 
   return (
     <section
-      className="reloop-campaign-carousel-section position-relative py-3 py-lg-4"
+      className="reloop-campaign-carousel-section position-relative py-3"
       aria-label="Promotional Campaigns Carousel"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -151,13 +151,15 @@ export default function CampaignCarousel() {
     >
       <div className="container-xl">
         <div
-          className="reloop-carousel-container position-relative overflow-hidden rounded-4 shadow-md"
+          className="reloop-carousel-container position-relative overflow-hidden rounded-4 shadow-sm"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
           style={{
-            backgroundColor: '#05080F',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            minHeight: '440px',
+            backgroundColor: '#0B1220',
+            border: '1px solid #E7E9ED',
+            aspectRatio: '21 / 9',
+            maxHeight: '420px',
+            minHeight: '260px',
           }}
         >
           {/* Slides Track */}
@@ -171,177 +173,54 @@ export default function CampaignCarousel() {
             {CAMPAIGN_SLIDES.map((slide, idx) => {
               const isActive = idx === currentIndex;
               return (
-                <div
+                <Link
                   key={slide.id}
-                  className="reloop-carousel-slide flex-shrink-0 w-100 position-relative"
-                  style={{
-                    minHeight: '440px',
-                    display: 'flex',
-                    alignItems: 'center',
-                  }}
+                  to={slide.link}
+                  className="reloop-carousel-slide flex-shrink-0 w-100 h-100 position-relative d-block text-decoration-none"
                   aria-hidden={!isActive}
+                  tabIndex={isActive ? 0 : -1}
+                  aria-label={`${slide.title} — ${slide.highlight}`}
                 >
-                  {/* Poster Image Background Layer */}
-                  <div
-                    className="position-absolute top-0 end-0 bottom-0 w-100 h-100"
+                  {/* Clean, Unobscured Poster Image */}
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                    fetchpriority={idx === 0 ? 'high' : 'auto'}
                     style={{
-                      overflow: 'hidden',
-                      pointerEvents: 'none',
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center',
+                      display: 'block',
+                      transition: 'transform 6s ease',
+                      transform: isActive ? 'scale(1.015)' : 'scale(1)',
                     }}
-                  >
-                    <img
-                      src={slide.image}
-                      alt={slide.title}
-                      loading={idx === 0 ? 'eager' : 'lazy'}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: 'center right',
-                        opacity: 0.88,
-                        transform: isActive ? 'scale(1.02)' : 'scale(1)',
-                        transition: 'transform 6s ease, opacity 0.6s ease',
-                      }}
-                    />
-                    {/* Deep Cinematic Gradient Overlay for Maximum Text Contrast */}
-                    <div
-                      className="position-absolute inset-0"
-                      style={{
-                        background:
-                          'linear-gradient(90deg, #05080F 0%, rgba(5, 8, 15, 0.94) 42%, rgba(5, 8, 15, 0.6) 70%, rgba(5, 8, 15, 0.25) 100%)',
-                      }}
-                    />
-                  </div>
-
-                  {/* Content Overlay */}
-                  <div className="container-fluid px-4 px-lg-5 py-4 position-relative" style={{ zIndex: 2 }}>
-                    <div className="row">
-                      <div className="col-12 col-md-8 col-lg-7">
-                        {/* Tag Pill */}
-                        <div className="d-flex align-items-center gap-2 mb-2">
-                          <span
-                            className="badge px-3 py-1 text-uppercase fw-bold"
-                            style={{
-                              backgroundColor: 'rgba(8, 127, 91, 0.22)',
-                              color: '#20C997',
-                              border: '1px solid rgba(32, 201, 151, 0.35)',
-                              letterSpacing: '0.08em',
-                              fontSize: '0.74rem',
-                            }}
-                          >
-                            <Sparkles size={13} className="me-1" /> {slide.tag}
-                          </span>
-                          <span
-                            className="badge px-2 py-1 text-uppercase fw-semibold d-none d-sm-inline-flex"
-                            style={{
-                              backgroundColor: 'rgba(233, 185, 73, 0.16)',
-                              color: '#E9B949',
-                              border: '1px solid rgba(233, 185, 73, 0.3)',
-                              fontSize: '0.7rem',
-                            }}
-                          >
-                            {slide.badge}
-                          </span>
-                        </div>
-
-                        {/* Title */}
-                        <h2
-                          className="display-6 fw-bold text-white mb-2"
-                          style={{
-                            fontFamily: "'Manrope', sans-serif",
-                            letterSpacing: '-0.025em',
-                            lineHeight: 1.15,
-                            textShadow: '0 2px 10px rgba(0,0,0,0.5)',
-                          }}
-                        >
-                          {slide.title}
-                        </h2>
-
-                        {/* Subtitle */}
-                        <p
-                          className="lead text-light mb-3"
-                          style={{
-                            fontSize: '1rem',
-                            color: '#CBD5E1',
-                            maxWidth: '560px',
-                            lineHeight: 1.55,
-                            textShadow: '0 1px 4px rgba(0,0,0,0.4)',
-                          }}
-                        >
-                          {slide.subtitle}
-                        </p>
-
-                        {/* Highlight */}
-                        <div className="d-flex align-items-center gap-2 mb-4 text-warning small fw-bold">
-                          <Zap size={16} className="text-warning flex-shrink-0" />
-                          <span style={{ color: '#E9B949', letterSpacing: '0.02em' }}>{slide.highlight}</span>
-                        </div>
-
-                        {/* Key Specs Pills */}
-                        <div className="d-flex flex-wrap align-items-center gap-2 mb-4">
-                          {slide.stats.map((s, si) => (
-                            <div
-                              key={si}
-                              className="px-2 py-1 rounded small"
-                              style={{
-                                backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                                border: '1px solid rgba(255, 255, 255, 0.12)',
-                                backdropFilter: 'blur(8px)',
-                                color: '#E2E8F0',
-                                fontSize: '0.78rem',
-                              }}
-                            >
-                              <span style={{ color: '#94A3B8' }}>{s.label}: </span>
-                              <strong className="text-white">{s.val}</strong>
-                            </div>
-                          ))}
-                        </div>
-
-                        {/* CTA Buttons */}
-                        <div className="d-flex flex-wrap align-items-center gap-3">
-                          <Link
-                            to={slide.link}
-                            className="btn btn-reloop-primary px-4 py-2 fw-bold d-inline-flex align-items-center gap-2"
-                            style={{
-                              boxShadow: '0 4px 18px rgba(8, 127, 91, 0.4)',
-                              fontSize: '0.92rem',
-                            }}
-                          >
-                            {slide.ctaText} <ArrowRight size={16} />
-                          </Link>
-                          <Link
-                            to="/products"
-                            className="btn btn-outline-light px-3 py-2 fw-semibold small"
-                            style={{
-                              borderColor: 'rgba(255, 255, 255, 0.25)',
-                              fontSize: '0.88rem',
-                            }}
-                          >
-                            All Categories
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  />
+                </Link>
               );
             })}
           </div>
 
-          {/* Navigation Arrows */}
+          {/* Navigation Chevrons */}
           <button
             type="button"
             className="carousel-control-btn position-absolute top-50 start-0 translate-middle-y ms-3 rounded-circle d-flex align-items-center justify-content-center text-white border-0"
-            onClick={goToPrev}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              goToPrev();
+            }}
             aria-label="Previous Campaign Slide"
             style={{
-              width: '44px',
-              height: '44px',
-              backgroundColor: 'rgba(11, 18, 32, 0.75)',
+              width: '42px',
+              height: '42px',
+              backgroundColor: 'rgba(11, 18, 32, 0.65)',
               backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
               zIndex: 10,
               cursor: 'pointer',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
               transition: 'all 0.2s ease',
             }}
           >
@@ -351,16 +230,21 @@ export default function CampaignCarousel() {
           <button
             type="button"
             className="carousel-control-btn position-absolute top-50 end-0 translate-middle-y me-3 rounded-circle d-flex align-items-center justify-content-center text-white border-0"
-            onClick={goToNext}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              goToNext();
+            }}
             aria-label="Next Campaign Slide"
             style={{
-              width: '44px',
-              height: '44px',
-              backgroundColor: 'rgba(11, 18, 32, 0.75)',
+              width: '42px',
+              height: '42px',
+              backgroundColor: 'rgba(11, 18, 32, 0.65)',
               backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
               zIndex: 10,
               cursor: 'pointer',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
               transition: 'all 0.2s ease',
             }}
           >
@@ -370,7 +254,11 @@ export default function CampaignCarousel() {
           {/* Bottom Bar: Indicators & Counter */}
           <div
             className="position-absolute bottom-0 start-0 end-0 px-4 py-3 d-flex align-items-center justify-content-between"
-            style={{ zIndex: 10, pointerEvents: 'none' }}
+            style={{
+              zIndex: 10,
+              pointerEvents: 'none',
+              background: 'linear-gradient(to top, rgba(5, 8, 15, 0.45) 0%, transparent 100%)',
+            }}
           >
             {/* Pill Indicator Dots */}
             <div className="d-flex align-items-center gap-2" style={{ pointerEvents: 'auto' }}>
@@ -378,15 +266,20 @@ export default function CampaignCarousel() {
                 <button
                   key={s.id}
                   type="button"
-                  onClick={() => goToSlide(idx)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    goToSlide(idx);
+                  }}
                   aria-label={`Jump to slide ${idx + 1}: ${s.title}`}
                   className="border-0 p-0 rounded-pill"
                   style={{
                     height: '6px',
                     width: idx === currentIndex ? '32px' : '10px',
-                    backgroundColor: idx === currentIndex ? '#087F5B' : 'rgba(255, 255, 255, 0.3)',
+                    backgroundColor: idx === currentIndex ? '#087F5B' : 'rgba(255, 255, 255, 0.55)',
                     transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
                     cursor: 'pointer',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.4)',
                   }}
                 />
               ))}
@@ -394,13 +287,13 @@ export default function CampaignCarousel() {
 
             {/* Slide Index Badge */}
             <div
-              className="badge px-2 py-1 rounded text-white-50 small"
+              className="badge px-2 py-1 rounded text-white small"
               style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                backgroundColor: 'rgba(11, 18, 32, 0.7)',
                 backdropFilter: 'blur(6px)',
                 fontVariantNumeric: 'tabular-nums',
                 fontSize: '0.74rem',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
               }}
             >
               0{currentIndex + 1} / 0{total}

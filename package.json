@@ -8,6 +8,8 @@
     "seed": "cd server && npm run seed",
     "test:health": "cd server && npm run test:health",
     "test:audit": "cd server && node test/complianceAudit.js",
+    "test:upload": "cd server && npm run test:upload",
+    "test:defects": "cd server && npm run test:defects",
     "test:regression": "cd server && npm run test:regression",
     "test:e2e": "cd server && npm run test:e2e",
     "build": "cd client && npm run build"

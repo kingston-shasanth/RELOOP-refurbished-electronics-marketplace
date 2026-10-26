@@ -38,6 +38,11 @@ export default function ProductImage({
 }) {
   const [hasError, setHasError] = useState(false);
 
+  // Reset error state when src changes
+  React.useEffect(() => {
+    setHasError(false);
+  }, [src]);
+
   // Resolve category fallback
   const getCategoryFallback = () => {
     const cat = (category || '').toLowerCase().trim();
@@ -47,18 +52,11 @@ export default function ProductImage({
     return CATEGORY_PHOTO_FALLBACKS.default;
   };
 
-  // Resolve best photographic image
-  const resolveImageSource = () => {
-    if (hasError) {
-      return getCategoryFallback();
-    }
-
-    // 1. Direct manifest lookup by slug
+  // Lookup photographic asset in manifest by slug or title
+  const getManifestCandidate = () => {
     if (slug && productManifest[slug]?.localPath) {
       return productManifest[slug].localPath;
     }
-
-    // 2. Direct manifest lookup by productTitle or matched slug
     if (productTitle) {
       const titleLower = productTitle.toLowerCase();
       for (const [key, record] of Object.entries(productManifest)) {
@@ -67,23 +65,38 @@ export default function ProductImage({
         }
       }
     }
+    return null;
+  };
 
-    // 3. If provided src is a legacy .svg illustration, upgrade to genuine photo
-    if (src && typeof src === 'string') {
-      if (src.endsWith('.svg') && !src.includes('fallback')) {
-        const baseName = src.replace('/images/products/', '').replace('.svg', '');
-        // Check manifest for matching base
-        for (const [key, record] of Object.entries(productManifest)) {
-          if (record.localPath.includes(baseName)) {
-            return record.localPath;
-          }
-        }
-        return getCategoryFallback();
-      }
-      return src;
+  // Resolve best photographic image
+  // Priority order:
+  // 1. Valid backend/uploaded image src (not legacy .svg)
+  // 2. Static photographic manifest candidate (slug or title match)
+  // 3. Category-specific photographic fallback
+  const resolveImageSource = () => {
+    if (hasError) {
+      return getCategoryFallback();
     }
 
-    // 4. Default to smart category photo
+    // 1. Valid product image URL/path returned by backend takes highest priority
+    if (src && typeof src === 'string' && src.trim() !== '') {
+      const trimmed = src.trim();
+      // If it's a legacy .svg illustration, upgrade to genuine photographic asset
+      if (trimmed.endsWith('.svg') && !trimmed.includes('fallback')) {
+        const manifestCandidate = getManifestCandidate();
+        if (manifestCandidate) return manifestCandidate;
+        return getCategoryFallback();
+      }
+      return trimmed;
+    }
+
+    // 2. Static manifest fallback lookup
+    const manifestCandidate = getManifestCandidate();
+    if (manifestCandidate) {
+      return manifestCandidate;
+    }
+
+    // 3. Default to smart category photographic fallback
     return getCategoryFallback();
   };
 

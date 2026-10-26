@@ -26,6 +26,8 @@ export default function CartPage() {
     grandTotal,
     discountAmount,
     promoCode,
+    reconciliationNotices,
+    dismissNotice,
     updateQuantity,
     removeFromCart,
     applyPromo,
@@ -81,6 +83,16 @@ export default function CartPage() {
         <div className="row g-4">
           {/* Left Column: Cart Items List */}
           <div className="col-12 col-lg-8">
+            {reconciliationNotices && reconciliationNotices.length > 0 && (
+              <div className="alert alert-info py-2 px-3 mb-3 rounded-3 d-flex flex-column gap-2 small border-0 shadow-xs" style={{ backgroundColor: '#EBFBEE', color: '#2B8A3E' }}>
+                {reconciliationNotices.map((notice, idx) => (
+                  <div key={idx} className="d-flex justify-content-between align-items-center">
+                    <span><strong>Notice:</strong> {notice}</span>
+                    <button type="button" className="btn-close btn-sm ms-2" onClick={() => dismissNotice(idx)} />
+                  </div>
+                ))}
+              </div>
+            )}
             <div className="d-flex flex-column gap-3 mb-4">
               {cartItems.map((item) => {
                 const prod = item.product;

@@ -317,7 +317,7 @@ const createProduct = async (req, res, next) => {
   }
 };
 
-// @desc    Update product (Admin)
+// @desc    Update product and associated Digital Passport (Admin)
 // @route   PUT /api/products/:id
 // @access  Private/Admin
 const updateProduct = async (req, res, next) => {
@@ -344,12 +344,103 @@ const updateProduct = async (req, res, next) => {
       delete req.body.images;
     }
 
+    // Extract passport-specific fields before updating Product
+    const diagnosticScore = req.body.diagnosticScore !== undefined
+      ? Number(req.body.diagnosticScore)
+      : undefined;
+
+    const batteryHealth = req.body.batteryHealthPercent !== undefined
+      ? Number(req.body.batteryHealthPercent)
+      : (req.body.specifications?.batteryHealthPercent !== undefined
+          ? Number(req.body.specifications.batteryHealthPercent)
+          : undefined);
+
+    // Update Product document
     const updated = await Product.findByIdAndUpdate(id, req.body, { new: true, runValidators: true });
+
+    // Handle linked DigitalPassport persistence
+    let passport = null;
+    if (updated.digitalPassportId) {
+      passport = await DigitalPassport.findById(updated.digitalPassportId);
+    }
+    if (!passport) {
+      passport = await DigitalPassport.findOne({ productId: updated._id });
+    }
+
+    if (passport) {
+      let passportChanged = false;
+
+      if (diagnosticScore !== undefined && !isNaN(diagnosticScore)) {
+        passport.diagnosticSummaryScore = Math.min(100, Math.max(0, diagnosticScore));
+        passportChanged = true;
+      }
+
+      if (batteryHealth !== undefined && !isNaN(batteryHealth)) {
+        passport.subsystemChecks = passport.subsystemChecks || {};
+        passport.subsystemChecks.battery = passport.subsystemChecks.battery || {};
+        passport.subsystemChecks.battery.healthPercent = Math.min(100, Math.max(0, batteryHealth));
+        passportChanged = true;
+      }
+
+      if (req.body.conditionGrade) {
+        passport.subsystemChecks = passport.subsystemChecks || {};
+        passport.subsystemChecks.chassis = passport.subsystemChecks.chassis || {};
+        passport.subsystemChecks.chassis.status =
+          req.body.conditionGrade === 'Pristine'
+            ? 'Flawless'
+            : (req.body.conditionGrade === 'Excellent' ? 'Micro-scratches' : 'Visible wear');
+        passportChanged = true;
+      }
+
+      if (passportChanged) {
+        await passport.save();
+      }
+
+      // Ensure bidirectional link
+      if (!updated.digitalPassportId || updated.digitalPassportId.toString() !== passport._id.toString()) {
+        updated.digitalPassportId = passport._id;
+        await updated.save();
+      }
+    } else if (diagnosticScore !== undefined || batteryHealth !== undefined) {
+      // Create new passport if missing
+      const newPassport = await DigitalPassport.create({
+        productId: updated._id,
+        deviceSerialNumber: `RLP-${Date.now().toString(36).toUpperCase()}`,
+        diagnosticSummaryScore: diagnosticScore !== undefined && !isNaN(diagnosticScore)
+          ? Math.min(100, Math.max(0, diagnosticScore))
+          : 95,
+        subsystemChecks: {
+          screen: { status: 'Pass', notes: 'Display tested for dead pixels and backlight uniformity.' },
+          battery: {
+            status: 'Pass',
+            healthPercent: batteryHealth !== undefined && !isNaN(batteryHealth)
+              ? Math.min(100, Math.max(0, batteryHealth))
+              : 92,
+            cycleCount: 120,
+          },
+          chassis: {
+            status: req.body.conditionGrade === 'Pristine' ? 'Flawless' : 'Micro-scratches',
+            notes: 'Chassis structurally intact.',
+          },
+          portsAndCharging: { status: 'Pass', notes: 'All ports power delivery verified.' },
+          camerasAndSensors: { status: 'Pass', notes: 'Cameras, mics, and sensors calibrated.' },
+          audioAndMics: { status: 'Pass', notes: 'Stereo drivers tested.' },
+          connectivityWifiBt: { status: 'Pass', notes: 'Wi-Fi & Bluetooth signal verified.' },
+        },
+        partsReplaced: [],
+      });
+
+      updated.digitalPassportId = newPassport._id;
+      await updated.save();
+    }
+
+    // Return fully populated product with fresh passport data
+    const finalProduct = await Product.findById(id).populate('digitalPassportId');
 
     res.status(200).json({
       success: true,
-      message: 'Product updated successfully.',
-      product: updated,
+      message: 'Product and associated passport updated successfully.',
+      product: finalProduct,
     });
   } catch (error) {
     next(error);

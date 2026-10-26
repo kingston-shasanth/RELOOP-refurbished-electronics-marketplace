@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRightLeft, CheckCircle2, XCircle, Search, AlertCircle } from 'lucide-react';
 import AdminLayout from '../../components/admin/AdminLayout';
 import api from '../../services/api';
+import { notifyDataChanged } from '../../services/syncChannel';
 
 export default function AdminTradeInsPage() {
   const [tradeIns, setTradeIns] = useState([]);
@@ -36,6 +37,7 @@ export default function AdminTradeInsPage() {
 
       if (res.data.success) {
         setAlertMsg({ type: 'success', text: 'Trade-in approved and voucher code generated!' });
+        notifyDataChanged('trade-in', id);
         fetchTradeIns();
       }
     } catch (err) {

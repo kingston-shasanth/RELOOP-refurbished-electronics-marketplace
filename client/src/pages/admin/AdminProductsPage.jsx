@@ -16,6 +16,7 @@ import AdminProductModal from '../../components/admin/AdminProductModal';
 import ConditionBadge from '../../components/common/ConditionBadge';
 import ProductImage from '../../components/common/ProductImage';
 import api from '../../services/api';
+import { notifyDataChanged } from '../../services/syncChannel';
 
 export default function AdminProductsPage() {
   const location = useLocation();
@@ -73,6 +74,7 @@ export default function AdminProductsPage() {
       const res = await api.delete(`/products/${id}`);
       if (res.data.success) {
         setAlertMsg({ type: 'success', text: `Product "${title || id}" deleted from MongoDB.` });
+        notifyDataChanged('products', id);
         fetchProducts();
       }
     } catch (err) {
@@ -83,6 +85,7 @@ export default function AdminProductsPage() {
 
   const handleSaveSuccess = (savedProduct) => {
     setAlertMsg({ type: 'success', text: `Product "${savedProduct.title}" saved successfully to MongoDB!` });
+    notifyDataChanged('products', savedProduct._id);
     fetchProducts();
   };
 

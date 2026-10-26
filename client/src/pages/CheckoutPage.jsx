@@ -26,7 +26,9 @@ import {
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import ProductImage from '../components/common/ProductImage';
+import OrderCelebration from '../components/common/OrderCelebration';
 import api from '../services/api';
+import { notifyDataChanged } from '../services/syncChannel';
 
 // Formatters for Demo Card Inputs
 const formatCardNumber = (value) => {
@@ -268,6 +270,8 @@ export default function CheckoutPage() {
         setPaymentStage('success');
         clearCart();
         setConfirmedOrder(res.data.order);
+        notifyDataChanged('orders', res.data.order._id);
+        notifyDataChanged('products');
         setShowOtpModal(false);
       }
     } catch (err) {
@@ -299,13 +303,20 @@ export default function CheckoutPage() {
     executeOrderPlacement();
   };
 
-  const isAuthenticated = Boolean(user && (token || localStorage.getItem('reloop_token')));
+  const celebratedOrdersRef = useRef(new Set());
+  const isAuthenticated = Boolean(user && (token || localStorage.getItem('reloop_customer_token') || localStorage.getItem('reloop_token')));
 
   // Render Post-Order Confirmation Receipt Screen
   if (confirmedOrder) {
     const orderNumber = confirmedOrder.orderNumber || confirmedOrder._id;
+    const shouldCelebrate = !celebratedOrdersRef.current.has(orderNumber);
+    if (shouldCelebrate) {
+      celebratedOrdersRef.current.add(orderNumber);
+    }
+
     return (
       <div className="py-5" style={{ backgroundColor: '#FAF9F6', minHeight: '80vh' }}>
+        {shouldCelebrate && <OrderCelebration orderId={orderNumber} />}
         <div className="container-xl" style={{ maxWidth: '860px' }}>
           {/* Success Banner */}
           <div className="reloop-card p-4 p-md-5 bg-white shadow-md text-center mb-4 border-0">

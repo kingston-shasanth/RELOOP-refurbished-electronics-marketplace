@@ -127,6 +127,14 @@ const uploadRoutes = require('./routes/uploadRoutes');
 // Serve uploaded product assets statically from public directory
 app.use('/images/products', express.static(path.resolve(__dirname, '../client/public/images/products')));
 
+// Dynamic API cache control: ensure fresh dynamic data across tabs without stale caching
+app.use('/api', (req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  next();
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
