@@ -169,7 +169,7 @@ export default function CheckoutPage() {
 
   // Pre-flight validation before payment modal or execution
   const validateForm = () => {
-    const activeToken = token || localStorage.getItem('reloop_token');
+    const activeToken = token || localStorage.getItem('reloop_customer_token') || localStorage.getItem('reloop_token');
     if (!user || !activeToken) {
       setErrorMsg('Authentication session required. Please sign in to finalize your order.');
       return false;
@@ -269,6 +269,10 @@ export default function CheckoutPage() {
         setProgressPercent(100);
         setPaymentStage('success');
         clearCart();
+        try {
+          localStorage.setItem('reloop_cart', JSON.stringify([]));
+          localStorage.removeItem('reloop_cart');
+        } catch (e) {}
         setConfirmedOrder(res.data.order);
         notifyDataChanged('orders', res.data.order._id);
         notifyDataChanged('products');
@@ -303,25 +307,20 @@ export default function CheckoutPage() {
     executeOrderPlacement();
   };
 
-  const celebratedOrdersRef = useRef(new Set());
   const isAuthenticated = Boolean(user && (token || localStorage.getItem('reloop_customer_token') || localStorage.getItem('reloop_token')));
 
   // Render Post-Order Confirmation Receipt Screen
   if (confirmedOrder) {
     const orderNumber = confirmedOrder.orderNumber || confirmedOrder._id;
-    const shouldCelebrate = !celebratedOrdersRef.current.has(orderNumber);
-    if (shouldCelebrate) {
-      celebratedOrdersRef.current.add(orderNumber);
-    }
 
     return (
       <div className="py-5" style={{ backgroundColor: '#FAF9F6', minHeight: '80vh' }}>
-        {shouldCelebrate && <OrderCelebration orderId={orderNumber} />}
+        <OrderCelebration orderId={orderNumber} />
         <div className="container-xl" style={{ maxWidth: '860px' }}>
           {/* Success Banner */}
           <div className="reloop-card p-4 p-md-5 bg-white shadow-md text-center mb-4 border-0">
             <div
-              className="p-3 rounded-circle d-inline-flex mb-3"
+              className="p-3 rounded-circle d-inline-flex mb-3 reloop-success-pulse"
               style={{ backgroundColor: '#E6FCF5', color: '#087F5B' }}
             >
               <CheckCircle2 size={48} />
@@ -728,6 +727,7 @@ export default function CheckoutPage() {
                       <input
                         type="radio"
                         name="paymentMethod"
+                        value="Simulated Card"
                         className="form-check-input mt-1"
                         checked={paymentMethod === 'Simulated Card'}
                         onChange={() => setPaymentMethod('Simulated Card')}
@@ -753,6 +753,7 @@ export default function CheckoutPage() {
                       <input
                         type="radio"
                         name="paymentMethod"
+                        value="UPI Simulator"
                         className="form-check-input mt-1"
                         checked={paymentMethod === 'UPI Simulator'}
                         onChange={() => setPaymentMethod('UPI Simulator')}
@@ -778,6 +779,7 @@ export default function CheckoutPage() {
                       <input
                         type="radio"
                         name="paymentMethod"
+                        value="Cash on Delivery"
                         className="form-check-input mt-1"
                         checked={paymentMethod === 'Cash on Delivery'}
                         onChange={() => setPaymentMethod('Cash on Delivery')}
@@ -1104,6 +1106,7 @@ export default function CheckoutPage() {
 
                   <button
                     type="submit"
+                    id="reloop-complete-order-btn"
                     className="btn btn-reloop-primary btn-lg w-100 py-3 fw-bold"
                     disabled={submitting}
                   >

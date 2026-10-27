@@ -828,6 +828,117 @@ a:hover {
 }
 
 /* ==========================================================================
+   MOTION SYSTEM & MICRO-INTERACTIONS
+   ========================================================================== */
+/* Page Transitions */
+.reloop-page-transition {
+  animation: reloopPageFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes reloopPageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated Dropdowns */
+.reloop-dropdown-animated {
+  animation: reloopDropdownIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top right;
+}
+
+@keyframes reloopDropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Button Active Feedback */
+.btn-reloop-primary:active,
+.btn-reloop-navy:active,
+.btn-reloop-outline:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+/* Wishlist Button Micro-interaction */
+.btn-wishlist {
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), color 0.18s ease;
+}
+
+.btn-wishlist:hover {
+  transform: scale(1.15);
+}
+
+.btn-wishlist:active {
+  transform: scale(0.92);
+}
+
+/* Order Confirmation Success Pulse */
+.reloop-success-pulse {
+  animation: successIconPulse 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes successIconPulse {
+  0% {
+    transform: scale(0.7);
+    box-shadow: 0 0 0 0 rgba(8, 127, 91, 0.4);
+  }
+  70% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 14px rgba(8, 127, 91, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(8, 127, 91, 0);
+  }
+}
+
+/* ==========================================================================
+   HERO DEVICE SHOWCASE SLIDER
+   ========================================================================== */
+.hero-showcase-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hero-showcase-card:hover {
+  box-shadow: 0 12px 30px rgba(16, 42, 69, 0.08) !important;
+}
+.hero-showcase-control {
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+.hero-showcase-card:hover .hero-showcase-control {
+  opacity: 1;
+}
+.hero-showcase-control:hover {
+  background-color: rgba(11, 18, 32, 0.95) !important;
+  transform: translateY(-50%) scale(1.08) !important;
+}
+.hero-showcase-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: rgba(11, 18, 32, 0.2);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.hero-showcase-dot.active {
+  width: 22px;
+  background-color: #087F5B;
+}
+
+/* ==========================================================================
    ACCESSIBILITY: REDUCED MOTION SUPPORT
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
@@ -839,6 +950,12 @@ a:hover {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  .reloop-page-transition,
+  .reloop-dropdown-animated,
+  .reloop-success-pulse {
+    animation: none !important;
+    transform: none !important;
+  }
   .skeleton-box {
     animation: none;
     background: #E2E8F0;
@@ -847,6 +964,10 @@ a:hover {
     transform: none;
   }
   .product-image-container img {
+    transform: none !important;
+  }
+  .btn-wishlist:hover,
+  .btn-wishlist:active {
     transform: none !important;
   }
 }

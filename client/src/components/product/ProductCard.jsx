@@ -69,7 +69,7 @@ export default function ProductCard({ product, showCompare = true }) {
 
           <button
             type="button"
-            className={`btn btn-sm p-1 rounded-circle border-0 ${isFavorited ? 'text-danger' : 'text-muted'}`}
+            className={`btn btn-sm p-1 rounded-circle border-0 btn-wishlist ${isFavorited ? 'text-danger' : 'text-muted'}`}
             onClick={(e) => {
               e.preventDefault();
               toggleWishlist(product);

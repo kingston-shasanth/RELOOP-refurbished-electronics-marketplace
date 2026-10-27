@@ -75,9 +75,7 @@ const CAMPAIGN_SLIDES = [
 
 export default function CampaignCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [touchStartX, setTouchStartX] = useState(null);
-  const autoplayTimerRef = useRef(null);
   const containerRef = useRef(null);
 
   const total = CAMPAIGN_SLIDES.length;
@@ -94,21 +92,14 @@ export default function CampaignCarousel() {
     setCurrentIndex(idx);
   };
 
-  // Autoplay management (5.5 seconds, paused on hover/focus)
+  // Unconditional 1.5s continuous auto-scroll
   useEffect(() => {
-    if (isPaused) {
-      if (autoplayTimerRef.current) clearInterval(autoplayTimerRef.current);
-      return;
-    }
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % CAMPAIGN_SLIDES.length);
+    }, 1500);
 
-    autoplayTimerRef.current = setInterval(() => {
-      goToNext();
-    }, 5500);
-
-    return () => {
-      if (autoplayTimerRef.current) clearInterval(autoplayTimerRef.current);
-    };
-  }, [isPaused, goToNext]);
+    return () => clearInterval(timer);
+  }, []);
 
   // Keyboard navigation
   const handleKeyDown = (e) => {
@@ -141,33 +132,30 @@ export default function CampaignCarousel() {
     <section
       className="reloop-campaign-carousel-section position-relative py-3"
       aria-label="Promotional Campaigns Carousel"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocus={() => setIsPaused(true)}
-      onBlur={() => setIsPaused(false)}
-      tabIndex={0}
       onKeyDown={handleKeyDown}
       ref={containerRef}
     >
       <div className="container-xl">
         <div
-          className="reloop-carousel-container position-relative overflow-hidden rounded-4 shadow-sm"
+          className="reloop-carousel-container position-relative overflow-hidden rounded-4 shadow-md mx-auto"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
           style={{
-            backgroundColor: '#0B1220',
-            border: '1px solid #E7E9ED',
-            aspectRatio: '21 / 9',
-            maxHeight: '420px',
-            minHeight: '260px',
+            backgroundColor: '#05080F',
+            border: '1px solid rgba(255, 255, 255, 0.12)',
+            height: 'clamp(280px, 44vw, 440px)',
+            width: '100%',
+            position: 'relative',
           }}
         >
           {/* Slides Track */}
           <div
             className="reloop-carousel-track d-flex h-100"
             style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
-              transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+              width: `${CAMPAIGN_SLIDES.length * 100}%`,
+              transform: `translateX(-${(currentIndex * 100) / CAMPAIGN_SLIDES.length}%)`,
+              transition: 'transform 0.55s cubic-bezier(0.16, 1, 0.3, 1)',
+              willChange: 'transform',
             }}
           >
             {CAMPAIGN_SLIDES.map((slide, idx) => {
@@ -176,25 +164,55 @@ export default function CampaignCarousel() {
                 <Link
                   key={slide.id}
                   to={slide.link}
-                  className="reloop-carousel-slide flex-shrink-0 w-100 h-100 position-relative d-block text-decoration-none"
+                  className="reloop-carousel-slide flex-shrink-0 h-100 position-relative d-flex align-items-center justify-content-center text-decoration-none overflow-hidden"
+                  style={{
+                    width: `${100 / CAMPAIGN_SLIDES.length}%`,
+                    flex: `0 0 ${100 / CAMPAIGN_SLIDES.length}%`,
+                  }}
                   aria-hidden={!isActive}
                   tabIndex={isActive ? 0 : -1}
                   aria-label={`${slide.title} — ${slide.highlight}`}
                 >
-                  {/* Clean, Unobscured Poster Image */}
+                  {/* Ambient Blurred Aura Background: seamlessly extends poster colors across wide viewports */}
+                  <div
+                    className="position-absolute inset-0 w-100 h-100 overflow-hidden"
+                    style={{ pointerEvents: 'none' }}
+                    aria-hidden="true"
+                  >
+                    <img
+                      src={slide.image}
+                      alt=""
+                      loading="lazy"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                        filter: 'blur(32px) brightness(0.35)',
+                        transform: 'scale(1.15)',
+                        opacity: 0.65,
+                      }}
+                    />
+                  </div>
+
+                  {/* Complete, Unclipped, High-Definition Original Campaign Poster */}
                   <img
                     src={slide.image}
                     alt={slide.title}
                     loading={idx === 0 ? 'eager' : 'lazy'}
                     fetchpriority={idx === 0 ? 'high' : 'auto'}
                     style={{
-                      width: '100%',
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      width: 'auto',
                       height: '100%',
-                      objectFit: 'cover',
+                      objectFit: 'contain',
                       objectPosition: 'center',
                       display: 'block',
-                      transition: 'transform 6s ease',
-                      transform: isActive ? 'scale(1.015)' : 'scale(1)',
+                      position: 'relative',
+                      zIndex: 1,
+                      transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                      transform: isActive ? 'scale(1)' : 'scale(0.98)',
                     }}
                   />
                 </Link>
@@ -205,7 +223,7 @@ export default function CampaignCarousel() {
           {/* Navigation Chevrons */}
           <button
             type="button"
-            className="carousel-control-btn position-absolute top-50 start-0 translate-middle-y ms-3 rounded-circle d-flex align-items-center justify-content-center text-white border-0"
+            className="carousel-control-btn position-absolute top-50 start-0 translate-middle-y ms-2 ms-md-3 rounded-circle d-flex align-items-center justify-content-center text-white border-0"
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
@@ -213,23 +231,23 @@ export default function CampaignCarousel() {
             }}
             aria-label="Previous Campaign Slide"
             style={{
-              width: '42px',
-              height: '42px',
-              backgroundColor: 'rgba(11, 18, 32, 0.65)',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
+              width: '44px',
+              height: '44px',
+              backgroundColor: 'rgba(11, 18, 32, 0.75)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.25)',
               zIndex: 10,
               cursor: 'pointer',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
-              transition: 'all 0.2s ease',
+              boxShadow: '0 4px 14px rgba(0,0,0,0.3)',
+              transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
             }}
           >
-            <ChevronLeft size={22} />
+            <ChevronLeft size={24} />
           </button>
 
           <button
             type="button"
-            className="carousel-control-btn position-absolute top-50 end-0 translate-middle-y me-3 rounded-circle d-flex align-items-center justify-content-center text-white border-0"
+            className="carousel-control-btn position-absolute top-50 end-0 translate-middle-y me-2 ms-md-3 rounded-circle d-flex align-items-center justify-content-center text-white border-0"
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
@@ -237,27 +255,27 @@ export default function CampaignCarousel() {
             }}
             aria-label="Next Campaign Slide"
             style={{
-              width: '42px',
-              height: '42px',
-              backgroundColor: 'rgba(11, 18, 32, 0.65)',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
+              width: '44px',
+              height: '44px',
+              backgroundColor: 'rgba(11, 18, 32, 0.75)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.25)',
               zIndex: 10,
               cursor: 'pointer',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
-              transition: 'all 0.2s ease',
+              boxShadow: '0 4px 14px rgba(0,0,0,0.3)',
+              transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
             }}
           >
-            <ChevronRight size={22} />
+            <ChevronRight size={24} />
           </button>
 
           {/* Bottom Bar: Indicators & Counter */}
           <div
-            className="position-absolute bottom-0 start-0 end-0 px-4 py-3 d-flex align-items-center justify-content-between"
+            className="position-absolute bottom-0 start-0 end-0 px-3 px-md-4 py-2 py-md-3 d-flex align-items-center justify-content-between"
             style={{
               zIndex: 10,
               pointerEvents: 'none',
-              background: 'linear-gradient(to top, rgba(5, 8, 15, 0.45) 0%, transparent 100%)',
+              background: 'linear-gradient(to top, rgba(5, 8, 15, 0.6) 0%, transparent 100%)',
             }}
           >
             {/* Pill Indicator Dots */}
@@ -274,12 +292,12 @@ export default function CampaignCarousel() {
                   aria-label={`Jump to slide ${idx + 1}: ${s.title}`}
                   className="border-0 p-0 rounded-pill"
                   style={{
-                    height: '6px',
-                    width: idx === currentIndex ? '32px' : '10px',
-                    backgroundColor: idx === currentIndex ? '#087F5B' : 'rgba(255, 255, 255, 0.55)',
-                    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                    height: '7px',
+                    width: idx === currentIndex ? '36px' : '10px',
+                    backgroundColor: idx === currentIndex ? '#087F5B' : 'rgba(255, 255, 255, 0.6)',
+                    transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
                     cursor: 'pointer',
-                    boxShadow: '0 1px 3px rgba(0,0,0,0.4)',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.5)',
                   }}
                 />
               ))}
@@ -289,11 +307,12 @@ export default function CampaignCarousel() {
             <div
               className="badge px-2 py-1 rounded text-white small"
               style={{
-                backgroundColor: 'rgba(11, 18, 32, 0.7)',
-                backdropFilter: 'blur(6px)',
+                backgroundColor: 'rgba(11, 18, 32, 0.75)',
+                backdropFilter: 'blur(8px)',
                 fontVariantNumeric: 'tabular-nums',
-                fontSize: '0.74rem',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
+                fontSize: '0.76rem',
+                fontWeight: 600,
+                border: '1px solid rgba(255, 255, 255, 0.25)',
               }}
             >
               0{currentIndex + 1} / 0{total}

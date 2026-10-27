@@ -7,13 +7,25 @@
 # Dependencies & Builds
 node_modules/
 dist/
-package-lock.json
+dist-ssr/
+.vite/
+coverage/
+
+# Local Runtime Artifacts & Process Lockfiles
+.reloop_pids.json
+*.pid
+
+# Local Database Backups & JSON Snapshots
+data/
 
 # Logs
 logs/
 *.log
 npm-debug.log*
 
-# OS Files
+# OS & Editor Files
 .DS_Store
 Thumbs.db
+*.swp
+*.tmp
+*.bak

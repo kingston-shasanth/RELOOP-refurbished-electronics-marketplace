@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Search, User, Heart, ShoppingBag, ShieldCheck, HelpCircle, RefreshCw, LogOut, LayoutDashboard } from 'lucide-react';
 import ReloopLogo from './ReloopLogo';
 import { useAuth } from '../../context/AuthContext';
@@ -12,6 +12,7 @@ export default function Navbar() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [showUserMenu, setShowUserMenu] = useState(false);
   const headerRef = useRef(null);
+  const userMenuRef = useRef(null);
 
   const { user, isAdmin, logout } = useAuth();
   const { totalItemsCount, subtotal } = useCart();
@@ -19,6 +20,41 @@ export default function Navbar() {
   const { compareCount } = useCompare();
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Close account dropdown when route changes
+  useEffect(() => {
+    setShowUserMenu(false);
+  }, [location.pathname, location.search]);
+
+  // Robust outside-click and Escape key dismissal for account dropdown
+  useEffect(() => {
+    if (!showUserMenu) return;
+
+    const handleOutsideClick = (e) => {
+      if (userMenuRef.current && !userMenuRef.current.contains(e.target)) {
+        setShowUserMenu(false);
+      }
+    };
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setShowUserMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    document.addEventListener('touchstart', handleOutsideClick);
+    document.addEventListener('click', handleOutsideClick);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('touchstart', handleOutsideClick);
+      document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [showUserMenu]);
 
   // Measure dynamic header height and update custom property for sticky offset
   useEffect(() => {
@@ -152,11 +188,15 @@ export default function Navbar() {
               )}
 
               {/* Account Dropdown / Link */}
-              <div className="position-relative">
+              <div className="position-relative" ref={userMenuRef}>
                 <button
                   type="button"
+                  id="reloop-account-menu-trigger"
                   className="btn btn-link text-decoration-none d-flex align-items-center gap-2 p-1 text-dark"
-                  onClick={() => setShowUserMenu(!showUserMenu)}
+                  onClick={() => setShowUserMenu((prev) => !prev)}
+                  aria-expanded={showUserMenu}
+                  aria-haspopup="true"
+                  aria-label="Account Menu"
                   style={{ fontSize: '0.88rem' }}
                 >
                   <div
@@ -178,8 +218,9 @@ export default function Navbar() {
                 {/* Dropdown Menu */}
                 {showUserMenu && (
                   <div
-                    className="dropdown-menu show shadow-lg border-0 position-absolute end-0 mt-2 p-2"
-                    style={{ minWidth: '220px', zIndex: 1050, borderRadius: '8px' }}
+                    id="reloop-account-menu-dropdown"
+                    className="dropdown-menu show shadow-lg border-0 position-absolute end-0 mt-2 p-2 reloop-dropdown-animated"
+                    style={{ minWidth: '220px', zIndex: 1050, borderRadius: '10px' }}
                   >
                     {user ? (
                       <>

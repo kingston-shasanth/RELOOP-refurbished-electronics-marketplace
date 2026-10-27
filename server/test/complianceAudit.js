@@ -16,11 +16,14 @@ async function runComplianceAudit() {
     console.log(`[${passed ? 'PASS' : 'FAIL'}] ${name}${details ? ` -> ${details}` : ''}`);
   };
 
+  let testEmail = null;
+  let testOrderId = null;
+
   try {
     // -------------------------------------------------------------
     // Test 1: Customer Registration (POST /api/auth/register)
     // -------------------------------------------------------------
-    const testEmail = `audit_tester_${Date.now()}@example.com`;
+    testEmail = `audit_tester_${Date.now()}@example.com`;
     const regRes = await fetch(`${baseUrl}/auth/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -344,7 +347,7 @@ async function runComplianceAudit() {
     // -------------------------------------------------------------
     // Test 17: Admin Order Status Stepper Update (PUT /api/orders/:id/status)
     // -------------------------------------------------------------
-    const testOrderId = orderData.order?._id;
+    testOrderId = orderData.order?._id;
     const updateOrderRes = await fetch(`${baseUrl}/orders/${testOrderId}/status`, {
       method: 'PUT',
       headers: {
@@ -384,6 +387,12 @@ async function runComplianceAudit() {
   } catch (err) {
     console.error('Audit execution error:', err);
   } finally {
+    if (testOrderId) {
+      await mongoose.connection.db.collection('orders').deleteOne({ _id: new mongoose.Types.ObjectId(testOrderId) });
+    }
+    if (testEmail) {
+      await mongoose.connection.db.collection('users').deleteOne({ email: testEmail });
+    }
     server.close();
     await mongoose.disconnect();
     console.log('[Audit] Server shut down and database disconnected cleanly.');

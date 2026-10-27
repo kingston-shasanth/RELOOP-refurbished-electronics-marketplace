@@ -32,7 +32,10 @@ export function CartProvider({ children }) {
     try {
       const saved = localStorage.getItem('reloop_cart');
       const itemsToReconcile = saved ? JSON.parse(saved) : [];
-      if (!itemsToReconcile || itemsToReconcile.length === 0) return;
+      if (!itemsToReconcile || itemsToReconcile.length === 0) {
+        setCartItems((prev) => (prev.length > 0 ? [] : prev));
+        return;
+      }
 
       isReconcilingRef.current = true;
       const updatedItems = [];
@@ -136,15 +139,22 @@ export function CartProvider({ children }) {
     setCartItems((prev) => {
       const existing = prev.find((item) => item.product._id === product._id);
       const stockLimit = product.stockCount || 10;
+      let nextCart;
 
       if (existing) {
         const newQty = Math.min(existing.quantity + quantity, stockLimit);
-        return prev.map((item) =>
+        nextCart = prev.map((item) =>
           item.product._id === product._id ? { ...item, quantity: newQty } : item
         );
       } else {
-        return [...prev, { product, quantity: Math.min(quantity, stockLimit) }];
+        nextCart = [...prev, { product, quantity: Math.min(quantity, stockLimit) }];
       }
+
+      try {
+        localStorage.setItem('reloop_cart', JSON.stringify(nextCart));
+      } catch (e) {}
+
+      return nextCart;
     });
   };
 
@@ -169,11 +179,18 @@ export function CartProvider({ children }) {
     setCartItems((prev) => prev.filter((item) => item.product._id !== productId));
   };
 
-  const clearCart = () => {
+  const clearCart = useCallback(() => {
+    try {
+      localStorage.setItem('reloop_cart', JSON.stringify([]));
+      localStorage.removeItem('reloop_cart');
+    } catch (e) {
+      console.error('Failed to clear cart storage:', e);
+    }
     setCartItems([]);
     setDiscountAmount(0);
     setPromoCode('');
-  };
+    setReconciliationNotices([]);
+  }, []);
 
   // Calculations
   const totalItemsCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);

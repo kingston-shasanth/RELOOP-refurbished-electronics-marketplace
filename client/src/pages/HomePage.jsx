@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ShieldCheck,
@@ -25,6 +25,8 @@ import {
   Search,
   Activity,
   Layers,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react';
 import ProductCard from '../components/product/ProductCard';
 import ProductSkeleton from '../components/common/ProductSkeleton';
@@ -33,9 +35,108 @@ import CampaignCarousel from '../components/home/CampaignCarousel';
 import api from '../services/api';
 import { subscribeToSync } from '../services/syncChannel';
 
+const HERO_SHOWCASE_SLIDES = [
+  {
+    id: 'gpu-rtx',
+    title: 'Colorful iGame GeForce RTX™ Ultra OC White',
+    category: 'PC Components',
+    spec: 'Triple 90mm Axial-Flow Fans · Holographic Accent',
+    condition: '50-Point Diagnostic Check Passed · Grade A+ Pristine',
+    image: '/images/products/geforce-rtx-igame-white.png',
+    link: '/products?category=PC%20Components',
+    badge: 'Flagship GPU · Lab Tested',
+    badgeColor: '#E6FCF5',
+    badgeTextColor: '#087F5B',
+  },
+  {
+    id: 'macbook-air-m1',
+    title: 'Apple MacBook Air 13.3" (M1 Silicon)',
+    category: 'Laptops',
+    spec: 'Retina Display · 96% Original Battery Health',
+    condition: '50-Point Diagnostic Check Passed · Grade A+ Pristine',
+    image: '/images/products/apple-macbook-air-m1.jpg',
+    link: '/products?category=Laptops',
+    badge: 'Apple Silicon Ultrabook',
+    badgeColor: '#EFF6FF',
+    badgeTextColor: '#2563EB',
+  },
+  {
+    id: 'ps5-digital',
+    title: 'Sony PlayStation 5 Digital Console',
+    category: 'Gaming',
+    spec: 'Custom AMD Zen 2 · 825GB Ultra-Fast NVMe',
+    condition: '50-Point Diagnostic Check Passed · Grade A+ Pristine',
+    image: '/images/products/ps5-digital.jpg',
+    link: '/products?category=Gaming',
+    badge: 'Next-Gen 4K 120Hz',
+    badgeColor: '#FAF5FF',
+    badgeTextColor: '#7C3AED',
+  },
+  {
+    id: 'sony-wh1000xm4',
+    title: 'Sony WH-1000XM4 Wireless ANC',
+    category: 'Audio',
+    spec: 'Dual Noise Sensor · 30-Hour Battery Life',
+    condition: '50-Point Diagnostic Check Passed · Grade A+ Pristine',
+    image: '/images/products/sony-wh1000xm4.jpg',
+    link: '/products?category=Audio',
+    badge: 'Hi-Res LDAC Audio',
+    badgeColor: '#FEF3C7',
+    badgeTextColor: '#D97706',
+  },
+  {
+    id: 'iphone-13',
+    title: 'Apple iPhone 13 (Super Retina XDR)',
+    category: 'Smartphones',
+    spec: 'A15 Bionic · Authentic Super Retina XDR Screen',
+    condition: '50-Point Diagnostic Check Passed · Grade A+ Pristine',
+    image: '/images/products/apple-iphone-13.jpg',
+    link: '/products?category=Smartphones',
+    badge: '5G Certified Flagship',
+    badgeColor: '#ECFDF5',
+    badgeTextColor: '#059669',
+  },
+];
+
 export default function HomePage() {
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  // Auto-sliding hero device showcase state (1.5s frequency)
+  const [heroSlide, setHeroSlide] = useState(0);
+  const [heroTouchStartX, setHeroTouchStartX] = useState(null);
+
+  const nextHeroSlide = useCallback(() => {
+    setHeroSlide((prev) => (prev + 1) % HERO_SHOWCASE_SLIDES.length);
+  }, []);
+
+  const prevHeroSlide = useCallback(() => {
+    setHeroSlide((prev) => (prev - 1 + HERO_SHOWCASE_SLIDES.length) % HERO_SHOWCASE_SLIDES.length);
+  }, []);
+
+  // Unconditional 1.5s continuous auto-scroll for hero device showcase
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setHeroSlide((prev) => (prev + 1) % HERO_SHOWCASE_SLIDES.length);
+    }, 1500);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleHeroTouchStart = (e) => {
+    setHeroTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleHeroTouchEnd = (e) => {
+    if (heroTouchStartX === null) return;
+    const diff = heroTouchStartX - e.changedTouches[0].clientX;
+    if (diff > 45) {
+      nextHeroSlide();
+    } else if (diff < -45) {
+      prevHeroSlide();
+    }
+    setHeroTouchStartX(null);
+  };
 
   const fetchCatalog = async () => {
     try {
@@ -174,37 +275,153 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Hero Visual Composition with Real Device Photography */}
-            <div className="col-12 col-lg-5 text-center">
+            {/* Hero Visual Composition with Auto-Sliding Real Device Showcase */}
+            <div className="col-12 col-lg-5">
               <div
-                className="position-relative p-4 rounded-4 bg-white shadow-sm border"
-                style={{ borderColor: '#E7E9ED' }}
+                className="position-relative rounded-4 bg-white shadow-sm border overflow-hidden hero-showcase-card"
+                style={{ borderColor: '#E7E9ED', height: '390px' }}
+                onTouchStart={handleHeroTouchStart}
+                onTouchEnd={handleHeroTouchEnd}
               >
+                {/* Horizontal Sliding Track */}
                 <div
-                  className="product-image-container mb-3"
+                  className="d-flex h-100"
                   style={{
-                    height: '270px',
-                    backgroundColor: '#FFFFFF',
-                    border: 'none',
-                    padding: '1.5rem',
+                    transform: `translateX(-${(heroSlide * 100) / HERO_SHOWCASE_SLIDES.length}%)`,
+                    transition: 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)',
+                    width: `${HERO_SHOWCASE_SLIDES.length * 100}%`,
+                    willChange: 'transform',
                   }}
                 >
-                  <ProductImage
-                    src="/images/products/apple-macbook-air-m1.jpg"
-                    alt="Certified MacBook Air Renewed"
-                    slug="apple-macbook-air-m1"
-                    category="Laptops"
-                    productTitle="Apple MacBook Air 13.3 M1"
-                    loading="eager"
-                  />
+                  {HERO_SHOWCASE_SLIDES.map((slide, idx) => (
+                    <Link
+                      key={slide.id}
+                      to={slide.link}
+                      className="d-flex flex-column align-items-center justify-content-between text-decoration-none h-100 position-relative p-3 pt-3 pb-4"
+                      style={{
+                        flex: `0 0 ${100 / HERO_SHOWCASE_SLIDES.length}%`,
+                        width: `${100 / HERO_SHOWCASE_SLIDES.length}%`,
+                        background: 'linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%)',
+                      }}
+                    >
+                      {/* Top Badges & Product Name */}
+                      <div className="w-100 d-flex justify-content-between align-items-center px-2" style={{ zIndex: 3 }}>
+                        <div className="d-flex align-items-center gap-2 text-truncate" style={{ maxWidth: '80%' }}>
+                          <span
+                            className="badge px-2.5 py-1 text-uppercase fw-bold shadow-xs"
+                            style={{
+                              backgroundColor: slide.badgeColor,
+                              color: slide.badgeTextColor,
+                              fontSize: '0.72rem',
+                              letterSpacing: '0.04em',
+                              borderRadius: '6px',
+                              border: '1px solid rgba(0,0,0,0.06)',
+                            }}
+                          >
+                            <Sparkles size={12} className="me-1" />
+                            {slide.badge}
+                          </span>
+                          <span className="fw-semibold text-dark small text-truncate d-none d-sm-inline">
+                            {slide.title}
+                          </span>
+                        </div>
+                        <span className="badge bg-light text-muted border small" style={{ fontSize: '0.68rem' }}>
+                          {idx + 1} / {HERO_SHOWCASE_SLIDES.length}
+                        </span>
+                      </div>
+
+                      {/* Full-Size Device Imagery (Unobstructed, Maximized Display Area) */}
+                      <div
+                        className="w-100 d-flex align-items-center justify-content-center flex-grow-1"
+                        style={{
+                          height: '290px',
+                          padding: '0.5rem 0.5rem 1.25rem',
+                          position: 'relative',
+                        }}
+                      >
+                        <img
+                          src={slide.image}
+                          alt={slide.title}
+                          loading={idx === 0 ? 'eager' : 'lazy'}
+                          style={{
+                            maxWidth: '100%',
+                            maxHeight: '100%',
+                            width: 'auto',
+                            height: '100%',
+                            objectFit: 'contain',
+                            filter: 'drop-shadow(0 14px 28px rgba(0,0,0,0.12))',
+                            transition: 'transform 0.3s ease',
+                          }}
+                        />
+                      </div>
+                    </Link>
+                  ))}
                 </div>
 
-                <div
-                  className="bg-dark text-white px-3 py-2 rounded-pill small d-inline-flex align-items-center gap-2 shadow-sm"
-                  style={{ fontSize: '0.78rem', backgroundColor: '#0B1220' }}
+                {/* Left / Right Chevron Controls */}
+                <button
+                  type="button"
+                  className="hero-showcase-control position-absolute top-50 start-0 translate-middle-y ms-2 rounded-circle d-flex align-items-center justify-content-center text-white border-0"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    prevHeroSlide();
+                  }}
+                  aria-label="Previous Slide"
+                  style={{
+                    width: '36px',
+                    height: '36px',
+                    backgroundColor: 'rgba(11, 18, 32, 0.75)',
+                    backdropFilter: 'blur(8px)',
+                    zIndex: 6,
+                    cursor: 'pointer',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+                  }}
                 >
-                  <ShieldCheck size={16} style={{ color: '#20C997' }} />
-                  <span>50-Point Diagnostic Check Passed · Grade A+ Pristine</span>
+                  <ChevronLeft size={20} />
+                </button>
+
+                <button
+                  type="button"
+                  className="hero-showcase-control position-absolute top-50 end-0 translate-middle-y me-2 rounded-circle d-flex align-items-center justify-content-center text-white border-0"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    nextHeroSlide();
+                  }}
+                  aria-label="Next Slide"
+                  style={{
+                    width: '36px',
+                    height: '36px',
+                    backgroundColor: 'rgba(11, 18, 32, 0.75)',
+                    backdropFilter: 'blur(8px)',
+                    zIndex: 6,
+                    cursor: 'pointer',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+                  }}
+                >
+                  <ChevronRight size={20} />
+                </button>
+
+                {/* Bottom Navigation Dots Indicator */}
+                <div
+                  className="position-absolute bottom-0 start-50 translate-middle-x mb-2.5 d-flex align-items-center justify-content-center"
+                  style={{ zIndex: 5, pointerEvents: 'auto' }}
+                >
+                  <div
+                    className="d-flex align-items-center gap-1.5 px-2 py-1 rounded-pill"
+                    style={{ backgroundColor: 'rgba(11, 18, 32, 0.35)', backdropFilter: 'blur(4px)' }}
+                  >
+                    {HERO_SHOWCASE_SLIDES.map((_, dotIdx) => (
+                      <button
+                        key={dotIdx}
+                        type="button"
+                        className={`hero-showcase-dot ${heroSlide === dotIdx ? 'active' : ''}`}
+                        onClick={() => setHeroSlide(dotIdx)}
+                        aria-label={`Go to slide ${dotIdx + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -708,29 +925,70 @@ export default function HomePage() {
             </div>
 
             <div className="col-12 col-lg-5">
-              <div className="p-4 rounded-4 bg-white text-dark shadow-lg border text-start" style={{ borderColor: '#E7E9ED' }}>
-                <div className="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+              <div
+                className="p-4 rounded-4 text-start position-relative overflow-hidden"
+                style={{
+                  background: 'linear-gradient(145deg, #131E33 0%, #0B1220 100%)',
+                  border: '1px solid rgba(32, 201, 151, 0.35)',
+                  boxShadow: '0 20px 45px -10px rgba(0, 0, 0, 0.6), 0 0 30px rgba(32, 201, 151, 0.08)',
+                }}
+              >
+                {/* Glowing accent border line */}
+                <div
+                  className="position-absolute top-0 start-0 end-0"
+                  style={{
+                    height: '2px',
+                    background: 'linear-gradient(90deg, transparent, #20C997, transparent)',
+                  }}
+                />
+
+                {/* Header: Live Telemetry Indicator & Lab Score */}
+                <div className="d-flex align-items-center justify-content-between mb-3 pb-2.5 border-bottom" style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}>
                   <div className="d-flex align-items-center gap-2">
-                    <QrCode size={20} style={{ color: '#087F5B' }} />
-                    <span className="fw-bold small" style={{ letterSpacing: '0.04em' }}>LIVE PASSPORT TELEMETRY</span>
+                    <span
+                      className="d-inline-block rounded-circle"
+                      style={{
+                        width: '8px',
+                        height: '8px',
+                        backgroundColor: '#20C997',
+                        boxShadow: '0 0 8px #20C997',
+                      }}
+                    />
+                    <QrCode size={18} style={{ color: '#20C997' }} />
+                    <span className="fw-bold small text-white" style={{ letterSpacing: '0.06em', fontSize: '0.78rem' }}>
+                      LIVE PASSPORT TELEMETRY
+                    </span>
                   </div>
                   <span
                     className="badge border"
                     style={{
-                      backgroundColor: '#E6FCF5',
-                      color: '#087F5B',
-                      borderColor: '#C3FAE8',
+                      backgroundColor: 'rgba(32, 201, 151, 0.15)',
+                      color: '#20C997',
+                      borderColor: 'rgba(32, 201, 151, 0.4)',
                       fontSize: '0.72rem',
+                      fontWeight: 600,
                     }}
                   >
-                    Lab Score: 98/100
+                    Lab Score: 98/100 · Grade A+
                   </span>
                 </div>
 
-                <div className="d-flex align-items-center gap-3 mb-3">
+                {/* Featured Device Preview Card */}
+                <div
+                  className="d-flex align-items-center gap-3 p-3 rounded-3 mb-3 border"
+                  style={{
+                    backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                    borderColor: 'rgba(255, 255, 255, 0.08)',
+                  }}
+                >
                   <div
-                    className="p-2 border rounded d-flex align-items-center justify-content-center"
-                    style={{ width: '68px', height: '68px', backgroundColor: '#FAF9F6' }}
+                    className="p-2 rounded-2 d-flex align-items-center justify-content-center flex-shrink-0"
+                    style={{
+                      width: '74px',
+                      height: '74px',
+                      backgroundColor: '#FFFFFF',
+                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)',
+                    }}
                   >
                     <ProductImage
                       src="/images/products/apple-macbook-air-m1.jpg"
@@ -738,33 +996,157 @@ export default function HomePage() {
                       slug="apple-macbook-air-m1"
                       category="Laptops"
                       productTitle="Apple MacBook Air M1"
-                      style={{ maxHeight: '52px', objectFit: 'contain' }}
+                      style={{ maxHeight: '58px', maxWidth: '100%', objectFit: 'contain' }}
                     />
                   </div>
-                  <div>
-                    <h6 className="fw-bold mb-0 text-dark" style={{ fontSize: '0.94rem' }}>Apple MacBook Air M1</h6>
-                    <small className="text-muted" style={{ fontSize: '0.78rem' }}>Passport ID: RLP-2026-M1AIR-9884</small>
+                  <div className="text-truncate">
+                    <h6 className="fw-bold mb-1 text-white text-truncate" style={{ fontSize: '0.94rem' }}>
+                      Apple MacBook Air 13.3" (M1)
+                    </h6>
+                    <div className="small font-monospace mb-1" style={{ color: '#94A3B8', fontSize: '0.75rem' }}>
+                      RLP-2026-M1AIR-9884
+                    </div>
+                    <span
+                      className="badge rounded-pill text-uppercase"
+                      style={{
+                        backgroundColor: 'rgba(56, 189, 248, 0.15)',
+                        color: '#38BDF8',
+                        fontSize: '0.65rem',
+                        border: '1px solid rgba(56, 189, 248, 0.3)',
+                      }}
+                    >
+                      Cryptographically Sealed
+                    </span>
                   </div>
                 </div>
 
-                <div className="small border-top pt-2 d-flex flex-column gap-2 text-secondary" style={{ fontSize: '0.82rem' }}>
-                  <div className="d-flex justify-content-between">
-                    <span>Battery Health:</span>
-                    <strong style={{ color: '#087F5B' }}>96% Verified OEM Capacity</strong>
+                {/* Telemetry Metrics 2x2 Grid */}
+                <div className="row g-2 mb-3">
+                  <div className="col-6">
+                    <div
+                      className="p-2.5 rounded-2 border h-100"
+                      style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                        borderColor: 'rgba(255, 255, 255, 0.07)',
+                      }}
+                    >
+                      <div className="d-flex align-items-center justify-content-between mb-1">
+                        <small style={{ color: '#94A3B8', fontSize: '0.72rem' }}>Battery Health</small>
+                        <ShieldCheck size={13} style={{ color: '#20C997' }} />
+                      </div>
+                      <div className="fw-bold text-white small mb-1" style={{ fontSize: '0.86rem' }}>
+                        96% <span style={{ color: '#20C997', fontSize: '0.72rem' }}>OEM Capacity</span>
+                      </div>
+                      <div className="progress" style={{ height: '4px', backgroundColor: 'rgba(255,255,255,0.1)' }}>
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={{ width: '96%', backgroundColor: '#20C997' }}
+                          aria-valuenow="96"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div className="d-flex justify-content-between">
-                    <span>Retina Panel Integrity:</span>
-                    <strong className="text-dark">Pass (0 Dead Pixels)</strong>
+
+                  <div className="col-6">
+                    <div
+                      className="p-2.5 rounded-2 border h-100"
+                      style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                        borderColor: 'rgba(255, 255, 255, 0.07)',
+                      }}
+                    >
+                      <div className="d-flex align-items-center justify-content-between mb-1">
+                        <small style={{ color: '#94A3B8', fontSize: '0.72rem' }}>Retina Panel</small>
+                        <CheckCircle2 size={13} style={{ color: '#20C997' }} />
+                      </div>
+                      <div className="fw-bold text-white small mb-1" style={{ fontSize: '0.86rem' }}>
+                        Pass <span style={{ color: '#94A3B8', fontSize: '0.72rem' }}>(0 Dead Pixels)</span>
+                      </div>
+                      <div className="small" style={{ color: '#20C997', fontSize: '0.7rem' }}>
+                        Factory Calibrated
+                      </div>
+                    </div>
                   </div>
-                  <div className="d-flex justify-content-between">
-                    <span>Chassis Cosmetic Grade:</span>
-                    <strong className="text-dark">Pristine (Grade A+)</strong>
+
+                  <div className="col-6">
+                    <div
+                      className="p-2.5 rounded-2 border h-100"
+                      style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                        borderColor: 'rgba(255, 255, 255, 0.07)',
+                      }}
+                    >
+                      <div className="d-flex align-items-center justify-content-between mb-1">
+                        <small style={{ color: '#94A3B8', fontSize: '0.72rem' }}>Cosmetic Grade</small>
+                        <Sparkles size={13} style={{ color: '#E9B949' }} />
+                      </div>
+                      <div className="fw-bold text-white small mb-1" style={{ fontSize: '0.86rem' }}>
+                        Grade A+ <span style={{ color: '#E9B949', fontSize: '0.72rem' }}>Pristine</span>
+                      </div>
+                      <div className="small" style={{ color: '#94A3B8', fontSize: '0.7rem' }}>
+                        Zero Micro-Scratches
+                      </div>
+                    </div>
                   </div>
-                  <div className="d-flex justify-content-between">
-                    <span>E-Waste Diverted:</span>
-                    <strong style={{ color: '#087F5B' }}>1.8 kg Diverted</strong>
+
+                  <div className="col-6">
+                    <div
+                      className="p-2.5 rounded-2 border h-100"
+                      style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                        borderColor: 'rgba(255, 255, 255, 0.07)',
+                      }}
+                    >
+                      <div className="d-flex align-items-center justify-content-between mb-1">
+                        <small style={{ color: '#94A3B8', fontSize: '0.72rem' }}>E-Waste Offset</small>
+                        <Leaf size={13} style={{ color: '#20C997' }} />
+                      </div>
+                      <div className="fw-bold text-white small mb-1" style={{ fontSize: '0.86rem' }}>
+                        1.8 kg <span style={{ color: '#20C997', fontSize: '0.72rem' }}>Diverted</span>
+                      </div>
+                      <div className="small" style={{ color: '#94A3B8', fontSize: '0.7rem' }}>
+                        46.5 kg CO₂e Saved
+                      </div>
+                    </div>
                   </div>
                 </div>
+
+                {/* Blockchain Provenance Ledger Hash */}
+                <div
+                  className="p-2 rounded-2 d-flex align-items-center justify-content-between mb-3 font-monospace"
+                  style={{
+                    backgroundColor: 'rgba(0, 0, 0, 0.35)',
+                    border: '1px solid rgba(255, 255, 255, 0.06)',
+                    fontSize: '0.7rem',
+                    color: '#94A3B8',
+                  }}
+                >
+                  <span className="text-truncate me-2">SHA-256: 7f8a9d12c84b...e890c41e</span>
+                  <span className="badge bg-dark text-success border border-secondary flex-shrink-0" style={{ fontSize: '0.62rem' }}>
+                    POLYGON SYNCED
+                  </span>
+                </div>
+
+                {/* Action Link */}
+                <Link
+                  to="/products?category=Laptops"
+                  className="btn btn-sm w-100 fw-bold d-flex align-items-center justify-content-center gap-2 py-2"
+                  style={{
+                    background: 'linear-gradient(90deg, #087F5B 0%, #099268 100%)',
+                    color: '#FFFFFF',
+                    border: 'none',
+                    borderRadius: '8px',
+                    fontSize: '0.84rem',
+                    boxShadow: '0 4px 14px rgba(8, 127, 91, 0.35)',
+                  }}
+                >
+                  <Activity size={15} />
+                  <span>Explore Certified Devices with Live DPP</span>
+                  <ArrowRight size={15} />
+                </Link>
               </div>
             </div>
           </div>
